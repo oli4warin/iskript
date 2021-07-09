@@ -5,3 +5,4 @@
 .DS_Store
 script/script.fdb_latexmk
 script/script.fls
+code/notebooks/.ipynb_checkpoints/Theorie Lesson 1-checkpoint.ipynb

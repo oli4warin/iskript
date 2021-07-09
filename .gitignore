@@ -3,3 +3,5 @@
 *.pdf
 *.synctex.gz
 .DS_Store
+script/script.fdb_latexmk
+script/script.fls

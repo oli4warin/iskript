@@ -8,6 +8,7 @@ class Turtle:
     direction = 0
     color = "black"
     drawing = True
+    stroke_width = 1
 
     def __init__(self, x_max=400, y_max=400):
         self.canvas = Canvas(width=x_max, height=y_max)
@@ -29,13 +30,14 @@ class Turtle:
         return (new_x, new_y)
 
     def turn(self, degree):
-        self.direction = (self.direction + degree) % 360
+        self.direction = (self.direction - degree) % 360
 
     def reset(self):
         self.x_pos = 200
         self.y_pos = 200
         self.direction = 0
         self.set_color("black")
+        self.set_stroke_width(1)
 
     def clear(self):
         self.canvas.clear()
@@ -78,6 +80,9 @@ class Turtle:
 
     def set_canvas_size(self, width, height):
         self.canvas = Canvas(width, height)
+
+    def set_stroke_width(self, width):
+        self.canvas.line_width = width
 
 
 turtle = Turtle()
@@ -152,3 +157,7 @@ def set_canvas_size(width, height):
     """Set the size of the canvas on which the turtle draws."""
     global turtle
     turtle = Turtle(width, height)
+
+
+def stoke_width(width):
+    turtle.set_stoke_width(width)

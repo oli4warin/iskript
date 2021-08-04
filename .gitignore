@@ -1,8 +1,12 @@
+# Files
 *.aux
 *.log
 *.pdf
 *.synctex.gz
+*.fdb_latexmk
+*.fls
+*.pyc
+
+# Folders
+.ipynb_checkpoints/
 .DS_Store
-script/script.fdb_latexmk
-script/script.fls
-code/notebooks/.ipynb_checkpoints/Theorie Lesson 1-checkpoint.ipynb

@@ -84,6 +84,9 @@ class Turtle:
     def set_stroke_width(self, width):
         self.canvas.line_width = width
 
+    def save_to_file(self, filename):
+        self.canvas.to_file(filename)
+
 
 turtle = Turtle()
 
@@ -160,4 +163,8 @@ def set_canvas_size(width, height):
 
 
 def stoke_width(width):
-    turtle.set_stoke_width(width)
+    turtle.set_stroke_width(width)
+
+
+def save_image(filename):
+    turtle.save_to_file(filename)

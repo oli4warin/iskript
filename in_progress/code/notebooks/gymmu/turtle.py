@@ -11,7 +11,7 @@ class Turtle:
     stroke_width = 1
 
     def __init__(self, x_max=400, y_max=400):
-        self.canvas = Canvas(width=x_max, height=y_max)
+        self.canvas = Canvas(width=x_max, height=y_max, sync_image_data=True)
         self.x_max = x_max
         self.x_pos = x_max / 2
         self.y_max = y_max
@@ -79,7 +79,7 @@ class Turtle:
         return self.y_pos
 
     def set_canvas_size(self, width, height):
-        self.canvas = Canvas(width, height)
+        self.canvas = Canvas(width, height, sync_image_data=True)
 
     def set_stroke_width(self, width):
         self.canvas.line_width = width

@@ -162,7 +162,7 @@ def set_canvas_size(width, height):
     turtle = Turtle(width, height)
 
 
-def stoke_width(width):
+def stroke_width(width):
     turtle.set_stroke_width(width)
 
 

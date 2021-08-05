@@ -54,6 +54,29 @@ def write_image_from_data(data):
     c.put_image_data(rgb_data, 0, 0)
     return c
 
+
+def write_image_from_data_colored(data):
+    l = len(data) / 3
+    side = int(sqrt(l))
+    scale = 150 / side
+
+    data = np.array(data) * 255
+
+    newdata = np.zeros((150,150, 3))
+    data = np.reshape(data, (side, side, 3))
+
+    for x in range(150):
+        for y in range(150):
+            for i in range(3):
+                newdata[x][y][i] = data[int(x // scale)][int(y // scale)][i]
+
+    c = Canvas(width=150, height=150, sync_image_data=True)
+    alpha = np.zeros((150, 150)) + 255
+    rgb_data = np.stack([newdata[:,:,0], newdata[:,:,1], newdata[:,:,2], alpha], axis=2)
+    c.put_image_data(rgb_data, 0, 0)
+    return c
+
+
 def get_example_data():
     i = Image.open('res/simple_image.png')
     return _get_greyscale(np.asarray(i))

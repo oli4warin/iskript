@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{gymmu.turtle} \PYG{k+kn}{import} \PYG{o}{*}
+
+\PYG{n}{make\PYGZus{}turtle}\PYG{p}{()}
+
+\PYG{k}{def} \PYG{n+nf}{draw\PYGZus{}circle}\PYG{p}{():}
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{360}\PYG{p}{):}
+        \PYG{n}{forward}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+        \PYG{n}{turn}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+
+\PYG{n}{draw\PYGZus{}circle}\PYG{p}{()}
+
+\PYG{n}{show}\PYG{p}{()}
+\end{Verbatim}

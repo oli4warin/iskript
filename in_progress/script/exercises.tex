@@ -9,18 +9,21 @@
 \lstset{language=Python}  
 
 
-\definecolor{codegreen}{rgb}{0,100,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.9,0.9,0.9}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 \lstdefinestyle{mystyle}{
-%    backgroundcolor=\color{backcolour},   
-%    commentstyle=\color{codegreen},
-    keywordstyle=\color{codegreen},
-    numberstyle=\tiny\color{codegray},
-%    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
+%	morekeywords={forward,turn},
+    backgroundcolor=\color{codegray},   
+    commentstyle=\color{codegreen},
+%    keywordstyle=\color{codegreen},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    identifierstyle=\color{blue},
+    stringstyle=\color{orange},
     breakatwhitespace=false,         
     breaklines=true,                 
     captionpos=b,                    
@@ -70,10 +73,56 @@ Write a program that draws the following parallelogram.
 \end{ex}
 
 \begin{ex}
+What does the following code draw? Try to solve it in your head first before you copy and paste 
+\begin{lstlisting}
+from gymmu.turtle import *
+
+make_turtle()
+
+forward(80)
+turn(90)
+forward(80)
+turn(-90)
+forward(80)
+turn(90)
+forward(80)
+turn(-90)
+forward(80)
+
+show()
+\end{lstlisting}
+\end{ex}
+
+\newpage
+
+\begin{ex}
+What does the following code draw? Try to solve it in your head first before you copy and paste 
+\begin{lstlisting}
+from gymmu.turtle import *
+
+make_turtle()
+
+forward(80)
+turn(90)
+forward(80)
+turn(-90)
+forward(-80)
+turn(-90)
+forward(-80)
+turn(90)
+forward(80)
+
+show()
+\end{lstlisting}
+\end{ex}
+
+\begin{ex}
 Write a program that draws a lightning bolt. The exact  dimensions can be chosen freely.
 \centfig{0.1}{arrow}
 \end{ex}
 
+
+\newpage
 
 \begin{ex}
 Draw the following house without going backwards or moving along the same line twice. Hint: Use lengths 185 for the base and 262 for the long diagonals.
@@ -93,10 +142,17 @@ Write a function that draws a regular polygon where the number of sides and the 
 \begin{ex}
 What does the following function do?
 \begin{lstlisting}
+from gymmu.turtle import *
+
+make_turtle()
+
 def jump(n):
     pen_up()
     forward(n)
-    pen_down() \end{lstlisting}
+    pen_down() 
+    
+	show()    
+\end{lstlisting}
 \end{ex}
 
 
@@ -110,6 +166,35 @@ Write a \verb|jump_to| function that places the turtle at any starting position 
 \newpage
 
 \subsection{Loops}
+
+
+\begin{ex}
+Write a function that draws ten small squares in a row.
+\end{ex}
+
+\begin{ex}
+Draw the following spiral:
+\centfig{0.5}{square_spiral}
+\end{ex}
+
+\begin{ex}
+Starting with a function that draws a square, can you write a new function that draws a filled square?
+\begin{lstlisting}
+from gymmu.turtle import *
+
+make_turtle()
+
+def draw_square(a):
+    for i in range(4):
+        forward(a)
+        turn(90)
+        
+show()
+\end{lstlisting}
+\end{ex}
+
+\newpage
+
 
 \begin{ex}
 The following code draws a circle.
@@ -130,11 +215,58 @@ show()
 
 \begin{enumerate}
 \item Think about why this draws a circle.
-\item can you add a square around this circle?
+\item Can you add a square around this circle?
 \end{enumerate}
 \end{ex}
 
+
+
+\newpage
+
 \subsection{Expand your Horizon}
+
+\begin{ex}
+The following code draws a five-pointed star.
+\begin{lstlisting}
+from gymmu.turtle import *
+
+make_turtle()
+
+for i in range(5):
+    forward(200)
+    turn(-144)
+    
+show()
+\end{lstlisting}
+\begin{enumerate}
+\item Can you change the code that it draws a nine-pointed star? How about a six-pointed star? Could you make as many points as you want?
+\item Can you change the code to create this image:
+\centfig{0.5}{star_spiral}
+\end{enumerate}
+\end{ex}
+
+\newpage
+
+\begin{ex}
+Run the followinig code in a code block:
+\begin{lstlisting}
+from gymmu.turtle import *
+
+colors = ['red', 'purple', 'blue', 'green']
+
+make_turtle()
+
+for x in range(360):
+    color(colors[x%4])
+    stroke_width(x/200 + 1)
+    forward(x)
+    turn(89)
+
+show()
+\end{lstlisting}
+Can you change the code to produce the following image?
+\centfig{0.5}{color_spiral}
+\end{ex}
 
 
 \end{document}

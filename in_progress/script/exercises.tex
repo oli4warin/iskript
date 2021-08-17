@@ -6,7 +6,7 @@
 \usepackage{dclecture}
 
 \usepackage{listings}
-\lstset{language=Python}  
+\lstset{language=Python}
 
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
@@ -16,7 +16,7 @@
 
 \lstdefinestyle{mystyle}{
 %	morekeywords={forward,turn},
-    backgroundcolor=\color{codegray},   
+    backgroundcolor=\color{codegray},
     commentstyle=\color{codegreen},
 %    keywordstyle=\color{codegreen},
     numberstyle=\tiny\color{gray},
@@ -24,15 +24,15 @@
     basicstyle=\footnotesize,
     identifierstyle=\color{blue},
     stringstyle=\color{orange},
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
     showstringspaces=false,
-    showtabs=false,                  
+    showtabs=false,
     tabsize=2
 }
 
@@ -73,7 +73,7 @@ Write a program that draws the following parallelogram.
 \end{ex}
 
 \begin{ex}
-What does the following code draw? Try to solve it in your head first before you copy and paste 
+What does the following code draw? Try to solve it in your head first before you copy and paste
 \begin{lstlisting}
 from gymmu.turtle import *
 
@@ -96,7 +96,7 @@ show()
 \newpage
 
 \begin{ex}
-What does the following code draw? Try to solve it in your head first before you copy and paste 
+What does the following code draw? Try to solve it in your head first before you copy and paste
 \begin{lstlisting}
 from gymmu.turtle import *
 
@@ -149,9 +149,9 @@ make_turtle()
 def jump(n):
     pen_up()
     forward(n)
-    pen_down() 
-    
-	show()    
+    pen_down()
+
+	show()
 \end{lstlisting}
 \end{ex}
 
@@ -188,7 +188,7 @@ def draw_square(a):
     for i in range(4):
         forward(a)
         turn(90)
-        
+
 show()
 \end{lstlisting}
 \end{ex}
@@ -209,7 +209,7 @@ def draw_circle():
         turn(1)
 
 draw_circle()
-    
+
 show()
 \end{lstlisting}
 
@@ -235,7 +235,7 @@ make_turtle()
 for i in range(5):
     forward(200)
     turn(-144)
-    
+
 show()
 \end{lstlisting}
 \begin{enumerate}
@@ -268,5 +268,141 @@ Can you change the code to produce the following image?
 \centfig{0.5}{color_spiral}
 \end{ex}
 
+\begin{ex}
+Given is the following code.
+\begin{lstlisting}
+from gymmu.turtle import *
+
+make_turtle()
+
+forward(100)
+turn(90)
+forward(100)
+turn(90)
+forward(100)
+turn(90)
+
+show()
+\end{lstlisting}
+Does the code produce this image? If not, can you fix it?
+\centfig{0.5}{error_1}
+\end{ex}
+
+\begin{ex}
+Given is the following code.
+\begin{lstlisting}
+from gymmu.turtle import *
+
+make_turtle()
+
+forward(100)
+turn(90)
+forward(100)
+turn(90)
+forward(100)
+turn(90)
+forward(100)
+\end{lstlisting}
+Does the code produce this image? If not, can you fix it?
+\centfig{0.5}{error_1}
+\end{ex}
+
+
+\begin{ex}
+Given is the following code.
+\begin{lstlisting}
+from gymmu.turtle import *
+
+make_turtle()
+
+forward(100)
+turn(90)
+forward(100)
+turn(90)
+forward(100)
+turn(90)
+forward(100)
+turn(90)
+forward(100)
+
+show()
+\end{lstlisting}
+Does the code produce this image? If not, can you fix it?
+
+\textbf{Hint:} Look closely at the position of the turtle.
+\centfig{0.5}{error_1}
+\end{ex}
+
+
+\begin{ex}
+Given is the following code.
+\begin{lstlisting}
+from gymmu.turtle import *
+
+make_turtle()
+
+for i in range(2):
+    turn(90)
+    forward(100)
+
+show()
+\end{lstlisting}
+Does the code produce this image? If not, can you fix it?
+\centfig{0.5}{error_2}
+\end{ex}
+
+\begin{ex}
+Given is the following code.
+\begin{lstlisting}
+from gymmu.turtle import *
+
+make_turtle()
+
+for i in range(3):
+    forward(100)
+    turn(90)
+
+show()
+\end{lstlisting}
+Does the code produce this image? If not, can you fix it?
+
+\textbf{Hint:} Look closely at the position of the turtle.
+\centfig{0.5}{error_2}
+\end{ex}
+
+\begin{ex}
+Given is the following code.
+\begin{lstlisting}
+from gymmu.turtle import *
+
+make_turtle()
+
+for i in range(10):
+    turn(90)
+    forward(10 + i)
+
+show()
+\end{lstlisting}
+Does the code produce this image? If not, can you fix it?
+\centfig{0.5}{error_3}
+\end{ex}
+
+
+\begin{ex}
+Given is the following code.
+\begin{lstlisting}
+from gymmu.turtle import *
+
+make_turtle()
+
+for i in range(10):
+    turn(90)
+    forward(10 * (i + 1))
+
+show()
+\end{lstlisting}
+Does the code produce this image? If not, can you fix it?
+\centfig{0.5}{error_3}
+\end{ex}
 
 \end{document}

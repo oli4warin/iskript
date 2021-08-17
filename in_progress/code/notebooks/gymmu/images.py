@@ -123,6 +123,20 @@ def write_image_rgb(data, width):
     return c
 
 
+def write_image_grey(data, width):
+    l = len(data)
+    height = int(l / width)
+
+    data = np.array(data)
+
+    data = np.reshape(data, (height, width, 1))
+
+    c = Canvas(width=width, height=height, sync_image_data=True)
+    grey_data = np.stack([data[:,:,0], data[:,:,0], data[:,:,0]], axis=2)
+    c.put_image_data(grey_data, 0, 0)
+    return c
+
+
 def get_example_data():
     i = Image.open('res/simple_image.png')
     return _get_greyscale(np.asarray(i))

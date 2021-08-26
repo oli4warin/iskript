@@ -1,4 +1,5 @@
 numpy
 jupyter
 ipycanvas
-Pillow
+pillow
+requests

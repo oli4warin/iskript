@@ -1,0 +1,173 @@
+\documentclass[11pt,a4paper]{report}
+
+\usepackage{xcolor}
+\def\farbe{cyan}
+
+\usepackage{dclecture}
+
+\usepackage{listings}
+\lstset{language=Python}
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.9,0.9,0.9}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+%	morekeywords={forward,turn},
+    backgroundcolor=\color{codegray},
+    commentstyle=\color{codegreen},
+%    keywordstyle=\color{codegreen},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    identifierstyle=\color{blue},
+    stringstyle=\color{orange},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+
+
+%%% Fancy Header and Footer
+\renewcommand{\headrule}{\vbox to 0pt{\hbox to\headwidth{\color{\farbe}\rule{\headwidth}{1pt}}\vss}}
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fusszeilenfelder bereinigen
+\fancyhead[C]{Computer Science} %Kopfzeile mitte
+%\fancyhead[R]{\includegraphics[width=0.2cm]{x.png}}
+\fancyfoot[C]{\thepage}
+
+
+
+
+
+
+
+\begin{document}
+\section{Images}
+
+\subsection{Basics}
+
+\begin{ex}
+Use the example code below as a starting point. Change the code in such a way
+that the resulting chessboard pattern has 4 fields per row.
+
+\begin{lstlisting}
+from gymmu.images import *
+
+data = [1, 0, 1, 0, 1, 0, 1, 0, 1]
+write_image_from_data(data)
+\end{lstlisting}
+\end{ex}
+
+\begin{ex}
+What image does the following code produce? Think about it first, before you
+execute the code.
+
+\begin{lstlisting}
+from gymmu.images import *
+
+data = []
+for i in range(100):
+    data.append(i * 0.01)
+write_image_from_data(data)
+\end{lstlisting}
+\end{ex}
+
+\begin{ex}
+What does the following code produce? Make an educated guess before you run
+your code.
+
+\textbf{Hint:} \% is the modulo operator.
+
+
+\begin{lstlisting}
+from gymmu.images import *
+
+data = []
+for i in range(100):
+    data.append(i % 2)
+write_image_from_data(data)
+\end{lstlisting}
+\end{ex}
+
+\begin{ex}
+Can you guess what image this code produces?
+
+\textbf{Hint:} Write down the values for $j$ and $i$.
+
+\begin{lstlisting}
+from gymmu.images import *
+
+data = []
+for i in range(10):
+    for j in range(10):
+        data.append((i + j) % 2)
+write_image_from_data(data)
+\end{lstlisting}
+\end{ex}
+
+\begin{ex}
+Write code that produces a chessboard pattern with 16 fields per row, where the
+top left field is white.
+\end{ex}
+
+\begin{ex}
+What image does the following code produce?
+\begin{lstlisting}
+from gymmu.images import *
+
+data = [
+    1, 0, 0,
+    0, 1, 0,
+    0, 0, 1,
+    0, 0, 0,
+]
+write_image_from_data_colored(data)
+\end{lstlisting}
+\end{ex}
+
+
+
+\begin{ex}
+Write code that produces an image with the colors \emph{cyan}, \emph{magenta},
+\emph{yellow} and \emph{white}.
+\end{ex}
+
+
+
+\begin{ex}
+Describe the image that the following code will produce. Check if your
+description was accurate by executing the code.
+\begin{lstlisting}
+from gymmu.images import *
+
+data = []
+for i in range(256):
+    data.append(i)
+    data.append(0)
+    data.append(0)
+write_image_from_data_rgb(data)
+\end{lstlisting}
+\end{ex}
+
+
+
+\begin{ex}
+Write code that produces an image where the top left pixel is white and the
+bottom right pixel is magenta. All the pixels in between follow a magenta
+gradient.
+\end{ex}
+\end{document}

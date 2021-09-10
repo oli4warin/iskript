@@ -3,3 +3,4 @@ jupyter
 ipycanvas
 pillow
 requests
+hexdump

@@ -1,0 +1,129 @@
+\documentclass[11pt,a4paper]{report}
+
+\usepackage{xcolor}
+\def\farbe{cyan}
+
+\usepackage{dclecture}
+
+\usepackage{listings}
+\lstset{language=Python}
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.9,0.9,0.9}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+%	morekeywords={forward,turn},
+    backgroundcolor=\color{codegray},
+    commentstyle=\color{codegreen},
+%    keywordstyle=\color{codegreen},
+    numberstyle=\tiny\color{white},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    identifierstyle=\color{blue},
+    stringstyle=\color{orange},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+
+
+%%% Fancy Header and Footer
+\renewcommand{\headrule}{\vbox to 0pt{\hbox to\headwidth{\color{\farbe}\rule{\headwidth}{1pt}}\vss}}
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fusszeilenfelder bereinigen
+\fancyhead[C]{Computer Science} %Kopfzeile mitte
+%\fancyhead[R]{\includegraphics[width=0.2cm]{x.png}}
+\fancyfoot[C]{\thepage}
+
+
+
+\usepackage{glossaries}
+
+\makeglossaries
+
+\newcommand*{\textbfblue}[1]{\textbf{\color{blue}{#1}}}
+\renewcommand*{\glstextformat}[1]{\textbfblue{#1}}
+
+
+\newglossaryentry{module}
+{
+  name=module,
+  description={a text file containing definitions and functions that can be used once imported.}
+}
+
+
+\begin{document}
+\section{Summary}
+
+
+\subsection{The Basics of the Turtle Environment}
+
+\begin{itemize}
+\item \begin{lstlisting}
+from gymmu.turtle import *
+\end{lstlisting}
+
+This imports the turtle \gls{module} containing all the commands we use to manipulate the turtle. The star * means that everything is imported.
+
+\item \begin{lstlisting}
+make_turtle()
+\end{lstlisting}
+
+Creates a blank working space and resets the turtle to position (200,200) and facing to the right.
+
+
+
+\item \begin{lstlisting}
+show()
+\end{lstlisting}
+
+Draws the resulting image from the preceding commands and shows the position of the turtle.
+
+\end{itemize}
+
+
+\subsection{Turtle Commands}
+
+\begin{itemize}
+\item \begin{lstlisting}
+forward(n)
+\end{lstlisting}
+
+Moves the turtle \texttt{n} \emph{units} forward.
+
+\item \begin{lstlisting}
+turn(a)
+\end{lstlisting}
+
+Rotates the turtle \texttt{a} degrees counter clockwise.
+
+\end{itemize}
+
+\subsection{Python Commands}
+
+\item \begin{lstlisting}
+for i in range(n):
+	the code
+\end{lstlisting}
+
+Repeats \texttt{the code} \texttt{n} times. Creates a \gsl{counter}
+
+
+
+\printglossary
+
+\end{document}

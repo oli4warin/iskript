@@ -11,3 +11,6 @@
 # Folders
 .ipynb_checkpoints/
 .DS_Store
+*.glg
+*.glo
+*.gls

@@ -77,6 +77,12 @@
   description={takes an (optional) input and returns an output.}
 }
 
+\newglossaryentry{RGB-color}
+{
+  name=RGB-color,
+  description={a method of coding color in computer graphics. Each color is made up of a mix of red (R), green (G) and blue (B). These are called the color channels.}
+}
+
 
 \begin{document}
 \section{Summary}
@@ -177,14 +183,27 @@ This imports the images \gls{module} containing all the commands we use to manip
 data = [list_of_numbers]
 \end{lstlisting}
 
-A list of numerical values that get interpreted as greyscale or colored pixels depending on the \texttt{write\_image\_\ldots} command being used.
+A list of numerical values that get interpreted as greyscale or colored pixels depending on the \texttt{write\_image\_\ldots} command being used. Entries in the list can be accessed using the name of the list and square brackets (e.g. \texttt{data[0]} returns the first entry in the list, \texttt{data[len(data)-1]} returns the last entry in  the list).\\
+{\bf Attention:} The name \texttt{data} is arbitrarily  chosen.  You can use other names for your list, but the examples all  use \texttt{data} as the list name.
 
 
 \item \begin{lstlisting}
 write_image_from_data(data)
 \end{lstlisting}
 
-Takes a list of numbers with values between \texttt{0} and \texttt{1} and assigns a greyscale value to 
+Takes a list of numbers with values between \texttt{0} and \texttt{1} and assigns a greyscale value to each pixel corresponding to the position of that number  in  the list. \\
+{\bf Attention:} The length of the list \texttt{data} must be a square number. The pixels are the arranged in a square pattern, where the first entry (\texttt{data[0]}) corresponds to  the top left pixel and the last entry (\texttt{data[len(data)-1]}) corresponds to the bottom right pixel.
+
+\item \begin{lstlisting}
+write_image_from_data_colored(data)
+\end{lstlisting}
+
+Takes a list of numbers with values between \texttt{0} and \texttt{1} and assigns a \gls{RGB-color} value to each pixel corresponding to the three numbers in  the list  belonging to that pixel. \\
+{\bf Attention:} The length of the list \texttt{data} must be three times a square number. The pixels are the arranged in a square pattern, where the first three entries (\texttt{data[0]}, \texttt{data[1]}, \texttt{data[2]}) correspond to the top left pixel and the last three entries  correspond to the bottom right pixel.
+
+
+
+
 \end{itemize}
 
 \printglossary

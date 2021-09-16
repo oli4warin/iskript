@@ -65,6 +65,18 @@
   description={a text file containing definitions and functions that can be used once imported.}
 }
 
+\newglossaryentry{counter}
+{
+  name=counter,
+  description={a variable (integer) that iterates through some values. Normally i, j or k are used for counters. in each iteration  the variables can be used as regular variables. Their values get updated in each iteration.}
+}
+
+\newglossaryentry{function}
+{
+  name=function,
+  description={takes an (optional) input and returns an output.}
+}
+
 
 \begin{document}
 \section{Summary}
@@ -100,29 +112,80 @@ Draws the resulting image from the preceding commands and shows the position of 
 
 \begin{itemize}
 \item \begin{lstlisting}
-forward(n)
+forward(distance)
 \end{lstlisting}
 
-Moves the turtle \texttt{n} \emph{units} forward.
+Moves the turtle \texttt{distance} units in the direction the turtle is facing. Negative values make the turtle move backwards without changing the orientaton of the turtle.
 
 \item \begin{lstlisting}
-turn(a)
+turn(angle)
 \end{lstlisting}
 
-Rotates the turtle \texttt{a} degrees counter clockwise.
+Rotates the turtle \texttt{angle} degrees counter clockwise. Negative values rotate the turtle clockwise. 
 
-\end{itemize}
 
+\newpage
 \subsection{Python Commands}
 
 \item \begin{lstlisting}
-for i in range(n):
-	the code
+for i in range(value):
+	the_code
 \end{lstlisting}
 
-Repeats \texttt{the code} \texttt{n} times. Creates a \gsl{counter} named \texttt{i} that has each value from $0$ to $n-1$ in 
+Creates a \gls{counter} named \texttt{i} that iterates through each value from $0$ to $n-1$ in steps of one. Repeats \texttt{the\_code} for each value of the counter.\\
+ {\bf Attention:} Only indented code will be repeated. If you mess  up the indentation, you will get an error message.  You will also get an error message if you leave out the colon (\texttt{:}).
+
+\item \begin{lstlisting}
+for i in range(min_value,max_value):
+	the_code
+\end{lstlisting}
+
+Creates a \gls{counter} named \texttt{i} that iterates through each value from \texttt{min\_value} to \texttt{max\_value-1} in steps of one. Repeats \texttt{the\_code} for each value of the counter. \\
+ {\bf Attention:} Only indented code will be repeated. If you mess  up the indentation, you will get an error message. You will also get an error message if you leave out the colon (\texttt{:}).
+
+\item \begin{lstlisting}
+for i in range(min_value,max_value,step):
+	the_code
+\end{lstlisting}
+
+Creates a \gls{counter} named \texttt{i} that iterates through each value from \texttt{min\_value} to \texttt{max\_value-1} in user defined \texttt{steps}. Repeats \texttt{the\_code} for each value of the counter.\\
+{\bf Attention:} Only indented code will be repeated. If you mess  up the indentation, you will get an error message.  You will also get an error message if you leave out the colon (\texttt{:}).
+
+\item \begin{lstlisting}
+def function_name([variable_1,variable_2,...]):
+	the_code
+\end{lstlisting}
+
+Creates a \gls{function}  that executes \texttt{the\_code}. If any variables are defined they can be used in \texttt{the\_code} below. If you define a function with variables, they must be entered when  calling the  function. If you define a function without any variabels, you must still add empty brackets to  the function call.  \\
+{\bf What do those square brackets mean?} The square brackets mean that an input  is optional -- i.e. you can create a function with no variables, with one variable, with  two variables etc.  \\
+ {\bf Attention:} Only indented code will be executed. If you mess  up the indentation, you will get an error message. You will also get an error message if you leave out the colon (\texttt{:}).
+ 
+ 
+ \end{itemize}
+ 
+ \subsection{Image Manipulation Commands}
+ 
+ \begin{itemize}
+\item \begin{lstlisting}
+from gymmu.images import *
+\end{lstlisting}
+
+This imports the images \gls{module} containing all the commands we use to manipulate images. The star * means that everything is imported.
 
 
+\item \begin{lstlisting}
+data = [list_of_numbers]
+\end{lstlisting}
+
+A list of numerical values that get interpreted as greyscale or colored pixels depending on the \texttt{write\_image\_\ldots} command being used.
+
+
+\item \begin{lstlisting}
+write_image_from_data(data)
+\end{lstlisting}
+
+Takes a list of numbers with values between \texttt{0} and \texttt{1} and assigns a greyscale value to 
+\end{itemize}
 
 \printglossary
 

@@ -188,6 +188,39 @@ A list of numerical values that get interpreted as greyscale or colored pixels d
 
 
 \item \begin{lstlisting}
+data[0] = 0
+\end{lstlisting}
+
+Sets the value of the first entry in the list \texttt{data} to zero. So if the original list was 
+
+\begin{lstlisting}
+ [1,2,3]
+\end{lstlisting}
+it is now
+\begin{lstlisting}
+ [0,2,3]
+\end{lstlisting}
+
+\item \begin{lstlisting}
+data.append(0)
+\end{lstlisting}
+
+Adds a zero to the end of an existing list called \texttt{data}. So if the original list was
+
+\begin{lstlisting}
+ [1,2,3]
+\end{lstlisting}
+it is now
+\begin{lstlisting}
+ [1,2,3,0]
+\end{lstlisting}
+
+
+
+
+
+
+\item \begin{lstlisting}
 write_image_from_data(data)
 \end{lstlisting}
 
@@ -199,6 +232,15 @@ write_image_from_data_colored(data)
 \end{lstlisting}
 
 Takes a list of numbers with values between \texttt{0} and \texttt{1} and assigns a \gls{RGB-color} value to each pixel corresponding to the three numbers in  the list  belonging to that pixel. \\
+{\bf Attention:} The length of the list \texttt{data} must be three times a square number. The pixels are the arranged in a square pattern, where the first three entries (\texttt{data[0]}, \texttt{data[1]}, \texttt{data[2]}) correspond to the top left pixel and the last three entries  correspond to the bottom right pixel.
+
+
+
+\item \begin{lstlisting}
+write_image_from_data_rbg(data)
+\end{lstlisting}
+
+Takes a list of numbers with values between \texttt{0} and \texttt{255} and assigns a \gls{RGB-color} value to each pixel corresponding to the three numbers in  the list  belonging to that pixel. \\
 {\bf Attention:} The length of the list \texttt{data} must be three times a square number. The pixels are the arranged in a square pattern, where the first three entries (\texttt{data[0]}, \texttt{data[1]}, \texttt{data[2]}) correspond to the top left pixel and the last three entries  correspond to the bottom right pixel.
 
 

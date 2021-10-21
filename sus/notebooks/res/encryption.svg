@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 731.13 560.09" style="enable-background:new 0 0 731.13 560.09;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st1{font-family:'MyriadPro-Regular';}
+	.st2{font-size:72px;}
+	.st3{font-size:48px;}
+	.st4{font-size:24px;}
+	.st5{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st6{fill:none;}
+	.st7{font-size:10px;}
+	.st8{letter-spacing:20;}
+	.st9{letter-spacing:7;}
+	.st10{letter-spacing:1;}
+	.st11{letter-spacing:15;}
+	.st12{letter-spacing:26;}
+	.st13{letter-spacing:16;}
+	.st14{letter-spacing:9;}
+	.st15{font-size:17px;}
+	.st16{font-size:18px;}
+	.st17{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+</style>
+<circle class="st0" cx="68.5" cy="394.09" r="68"/>
+<text transform="matrix(1 0 0 1 46.468 415.2234)" class="st1 st2">A</text>
+<circle class="st0" cx="662.63" cy="394.48" r="68"/>
+<text transform="matrix(1 0 0 1 643.1136 415.6089)" class="st1 st2">B</text>
+<text transform="matrix(1 0 0 1 19.4093 548.0879)" class="st1 st3">Alice</text>
+<text transform="matrix(1 0 0 1 24.1735 133.0879)" class="st1 st4">Plaintext</text>
+<text transform="matrix(1 0 0 1 622.3136 548.0879)" class="st1 st3">Bob</text>
+<rect x="19.35" y="149.33" class="st5" width="99" height="136"/>
+<rect x="31.35" y="162.12" class="st6" width="75" height="110.42"/>
+<text transform="matrix(1 0 0 1 31.3472 169.2225)"><tspan x="0" y="0" class="st1 st7">Lorem</tspan><tspan x="26.83" y="0" class="st1 st7 st8"> </tspan><tspan x="49.16" y="0" class="st1 st7">ipsum </tspan><tspan x="0" y="12" class="st1 st7">dolor</tspan><tspan x="22.25" y="12" class="st1 st7 st9"> </tspan><tspan x="32.05" y="12" class="st1 st7">sit</tspan><tspan x="41.66" y="12" class="st1 st7 st9"> </tspan><tspan x="51.45" y="12" class="st1 st7">amet, </tspan><tspan x="0" y="24" class="st1 st7 st10">consectetue</tspan><tspan x="71.73" y="24" class="st1 st7">r </tspan><tspan x="0" y="36" class="st1 st7">adipiscing</tspan><tspan x="42.75" y="36" class="st1 st7 st11"> </tspan><tspan x="59.91" y="36" class="st1 st7">elit, </tspan><tspan x="0" y="48" class="st1 st7">sed</tspan><tspan x="14.61" y="48" class="st1 st7"> </tspan><tspan x="17.48" y="48" class="st1 st7">diam</tspan><tspan x="38.62" y="48" class="st1 st7"> </tspan><tspan x="41.49" y="48" class="st1 st7">nonum</tspan><tspan x="71.93" y="48" class="st1 st7">-</tspan><tspan x="0" y="60" class="st1 st7">my</tspan><tspan x="13.05" y="60" class="st1 st7 st10"> </tspan><tspan x="16.32" y="60" class="st1 st7">nibh</tspan><tspan x="35.44" y="60" class="st1 st7 st10"> </tspan><tspan x="38.71" y="60" class="st1 st7">euismod </tspan><tspan x="0" y="72" class="st1 st7">tincidunt</tspan><tspan x="38.03" y="72" class="st1 st7 st12"> </tspan><tspan x="66.18" y="72" class="st1 st7">ut </tspan><tspan x="0" y="84" class="st1 st7">laoreet</tspan><tspan x="29.27" y="84" class="st1 st7 st13"> </tspan><tspan x="47.74" y="84" class="st1 st7">dolore </tspan><tspan x="0" y="96" class="st1 st7">magna</tspan><tspan x="29.12" y="96" class="st1 st7 st14"> </tspan><tspan x="41.18" y="96" class="st1 st7">aliquam </tspan></text>
+<text transform="matrix(1 0 0 1 618.4512 136.2337)" class="st1 st4">Plaintext</text>
+<rect x="613.63" y="152.48" class="st5" width="99" height="136"/>
+<rect x="625.63" y="165.27" class="st6" width="75" height="110.42"/>
+<text transform="matrix(1 0 0 1 625.625 172.3683)"><tspan x="0" y="0" class="st1 st7">Lorem</tspan><tspan x="26.83" y="0" class="st1 st7 st8"> </tspan><tspan x="49.16" y="0" class="st1 st7">ipsum </tspan><tspan x="0" y="12" class="st1 st7">dolor</tspan><tspan x="22.25" y="12" class="st1 st7 st9"> </tspan><tspan x="32.05" y="12" class="st1 st7">sit</tspan><tspan x="41.66" y="12" class="st1 st7 st9"> </tspan><tspan x="51.45" y="12" class="st1 st7">amet, </tspan><tspan x="0" y="24" class="st1 st7 st10">consectetue</tspan><tspan x="71.73" y="24" class="st1 st7">r </tspan><tspan x="0" y="36" class="st1 st7">adipiscing</tspan><tspan x="42.75" y="36" class="st1 st7 st11"> </tspan><tspan x="59.91" y="36" class="st1 st7">elit, </tspan><tspan x="0" y="48" class="st1 st7">sed</tspan><tspan x="14.61" y="48" class="st1 st7"> </tspan><tspan x="17.48" y="48" class="st1 st7">diam</tspan><tspan x="38.62" y="48" class="st1 st7"> </tspan><tspan x="41.49" y="48" class="st1 st7">nonum</tspan><tspan x="71.93" y="48" class="st1 st7">-</tspan><tspan x="0" y="60" class="st1 st7">my</tspan><tspan x="13.05" y="60" class="st1 st7 st10"> </tspan><tspan x="16.32" y="60" class="st1 st7">nibh</tspan><tspan x="35.44" y="60" class="st1 st7 st10"> </tspan><tspan x="38.71" y="60" class="st1 st7">euismod </tspan><tspan x="0" y="72" class="st1 st7">tincidunt</tspan><tspan x="38.03" y="72" class="st1 st7 st12"> </tspan><tspan x="66.18" y="72" class="st1 st7">ut </tspan><tspan x="0" y="84" class="st1 st7">laoreet</tspan><tspan x="29.27" y="84" class="st1 st7 st13"> </tspan><tspan x="47.74" y="84" class="st1 st7">dolore </tspan><tspan x="0" y="96" class="st1 st7">magna</tspan><tspan x="29.12" y="96" class="st1 st7 st14"> </tspan><tspan x="41.18" y="96" class="st1 st7">aliquam </tspan></text>
+<text transform="matrix(1 0 0 1 318.7276 136.2337)" class="st1 st4">Ciphertext</text>
+<rect x="322.63" y="152.48" class="st5" width="99" height="136"/>
+<rect x="334.63" y="165.27" class="st6" width="75" height="110.42"/>
+<text transform="matrix(1 0 0 1 334.625 177.3381)"><tspan x="0" y="0" class="st1 st15">c9^I^5z4</tspan><tspan x="66.28" y="0" class="st1 st15">6</tspan><tspan x="0" y="20.4" class="st1 st15">$F$*&amp;S9</tspan><tspan x="66.28" y="20.4" class="st1 st15">8</tspan><tspan x="0" y="40.8" class="st1 st15">CD9c$au</tspan><tspan x="66.72" y="40.8" class="st1 st15">F</tspan><tspan x="0" y="61.2" class="st1 st15">FlV$7m4</tspan><tspan x="66.28" y="61.2" class="st1 st15">4</tspan><tspan x="0" y="81.6" class="st1 st15">Y1#6^30</tspan></text>
+<g>
+	<ellipse class="st5" cx="206.13" cy="54.98" rx="30.5" ry="13.5"/>
+	<text transform="matrix(1 0 0 1 192.4994 60.2595)" class="st1 st16">Key</text>
+</g>
+<g>
+	<ellipse class="st5" cx="543.13" cy="54.98" rx="30.5" ry="13.5"/>
+	<text transform="matrix(1 0 0 1 529.4994 60.2595)" class="st1 st16">Key</text>
+</g>
+<g>
+	<g>
+		<line class="st17" x1="118.13" y1="216.98" x2="310.9" y2="216.98"/>
+		<g>
+			<path d="M308.2,216.98l-3.29-5.4l0.18-0.12l8.81,3.5c3.07,0.68,6.14,1.35,9.21,2.03c-3.07,0.68-6.14,1.35-9.21,2.03l-8.81,3.5
+				l-0.18-0.09L308.2,216.98z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st17" x1="424.13" y1="217.48" x2="601.4" y2="217.48"/>
+		<g>
+			<path d="M598.7,217.48l-3.29-5.4l0.18-0.12l8.81,3.5c3.07,0.68,6.14,1.35,9.21,2.03c-3.07,0.68-6.14,1.35-9.21,2.03l-8.81,3.5
+				l-0.18-0.09L598.7,217.48z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st5" x1="205.63" y1="68.48" x2="239.69" y2="213.51"/>
+		<g>
+			<path d="M239.49,212.63l1.5-1.48l0.05,0.05l-0.46,3.13c0.01,1.05,0.03,2.1,0.04,3.14c-0.45-0.94-0.91-1.89-1.36-2.83l-1.81-2.59
+				l0.02-0.07L239.49,212.63z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st5" x1="540.63" y1="68.48" x2="499.73" y2="213.55"/>
+		<g>
+			<path d="M499.97,212.69l2.03-0.57l0.02,0.07l-1.92,2.51c-0.49,0.92-0.99,1.85-1.48,2.77c0.06-1.05,0.12-2.09,0.18-3.14
+				l-0.33-3.14l0.05-0.05L499.97,212.69z"/>
+		</g>
+	</g>
+</g>
+</svg>

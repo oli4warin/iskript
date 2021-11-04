@@ -1,0 +1,206 @@
+\documentclass[11pt,a4paper]{report}
+
+\usepackage{xcolor}
+\def\farbe{cyan}
+
+\usepackage{dclecture}
+
+\usepackage{listings}
+\lstset{language=Python}
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.9,0.9,0.9}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+%	morekeywords={forward,turn},
+    backgroundcolor=\color{codegray},
+    commentstyle=\color{codegreen},
+%    keywordstyle=\color{codegreen},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    identifierstyle=\color{blue},
+    stringstyle=\color{orange},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+
+
+%%% Fancy Header and Footer
+\renewcommand{\headrule}{\vbox to 0pt{\hbox to\headwidth{\color{\farbe}\rule{\headwidth}{1pt}}\vss}}
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fusszeilenfelder bereinigen
+\fancyhead[C]{Computer Science} %Kopfzeile mitte
+%\fancyhead[R]{\includegraphics[width=0.2cm]{x.png}}
+\fancyfoot[C]{\thepage}
+
+
+
+
+
+
+
+\begin{document}
+\section{Cryptography}
+
+\subsection{Substitution Ciphers}
+
+\begin{ex}
+Encrypt \verb|THE QUICK BROWN FOX| using a Caesar shift of 17 by hand.
+\end{ex}
+
+
+\begin{ex}
+Eve intercepted this message: \verb|N QNPJ HNUMJWX.| Figure out how to break it to get Alice’s message.
+\end{ex}
+
+
+\begin{ex}
+Use the Caesar Decryption tool on the Jupyter notebook to decode the following message:
+\begin{verbatim}
+Pyebc mybok xncof oxiok bckqy yebpk drobc lbyeq rdpyb drezy xdrsc
+myxds xoxd, kxogx kdsyx ,myxm osfon sxVsl obdi, kxnno nsmkd ondyd
+rozby zycsd syxdr kdkvv woxkb ombok donoa ekv.
+\end{verbatim}
+\end{ex}
+
+\begin{ex}
+Alice tries to make the Caesar code better by using multiple Caesar shifts. Her argument is: "If I use 50 Caesar shifts,  then the keyspace will be $26^50$ -- which is much larger than the standard keyspace of 26 for the Caesar code.  This means the code will be harder to crack." 
+
+Is her argument sound?
+\end{ex}
+
+\begin{ex}
+Given the following One Time Pad: 
+\begin{verbatim}
+74288, 12127, 11380, 68612, 71750, 80865, 45593, 84621, 37271,
+22781, 46647, 18730, 62697, 23437, 36413, 51216, 65713, 74749,
+44834, 89655
+\end{verbatim}
+encrypt the message \verb|TOP  SECRET| using a standard alphabet replacement (a = 1, b = 2, etc.) by hand.
+\end{ex}
+
+\begin{ex}
+Given the following One Time Pad: 
+\begin{verbatim}
+74288, 12127, 11380, 68612, 71750, 80865, 45593, 84621, 37271,
+22781, 46647, 18730, 62697, 23437, 36413, 51216, 65713, 74749,
+44834, 89655
+\end{verbatim}
+encrypt the message \verb|TOP  SECRET| using the ASCII table by hand.
+\end{ex}
+
+\begin{ex}
+Using the code from the Caesar Code as a guide, try to write code that wiill encrypt text using a given  One Time Pad.
+\end{ex}
+
+
+
+
+
+
+\begin{ex}
+Encrypt the following text using a Vigenère Cipher with the keyword \verb|SUPERMAN| by hand:
+\begin{verbatim}
+I LOVE MATH
+\end{verbatim}
+
+\end{ex}
+
+
+\begin{ex}
+Encrypt the following text using a Vigenère Cipher with the keyword \verb|SUPERMAN| using the tool on the Jupyter notebook:
+\begin{verbatim}
+To be, or not to be, that is the question:
+Whether 'tis nobler in the mind to suffer
+The slings and arrows of outrageous fortune,
+Or to take arms against a sea of troubles
+And by opposing end them. To die - to sleep,
+No more; and by a sleep to say we end
+The heart-ache and the thousand natural shocks
+That flesh is heir to: 'tis a consummation
+Devoutly to be wish'd. To die, to sleep;
+\end{verbatim}
+\end{ex}
+
+
+\begin{ex}
+Using only the code from the Caesar Code, try to write code that wiill encrypt text using the Vigenère method.
+\end{ex}
+
+
+\subsection{Transposition Ciphers}
+
+
+\begin{ex}
+Write out the message
+\verb|BEWARE THE IDES OF MARCH.|
+in rows of length 5 and read out the columns. Give the ciphertext.
+\end{ex}
+
+\begin{ex}
+Decrypt the following message using length 4: \verb|INLRREINVCFIIAOA|.
+\end{ex}
+
+\begin{ex}
+Eve intercepted the following message. Help her break it: \verb|HYDAMAPOYPNZ|.
+\end{ex}
+
+
+\subsection{Modular Arithmetic}
+
+\begin{ex}
+What is $51\mod 4$ ?
+\end{ex}
+
+\begin{ex}
+What is $(500 + 160) \mod 2$ ?
+\end{ex}
+
+
+\begin{ex}
+What are the only possible solutions for $x\mod 4$ ?
+\end{ex}
+
+
+\begin{ex}
+In general, what are the possible solutions for $x\mod n$ ?
+\end{ex}
+
+
+\subsubsection{Multiplying with modular arithmetic}
+
+Multiplying also works in the natural way. We multiply the solutions to $x = a\mod b$ and $y = c \mod b$ and then we reduce $(x\cdot y) \mod b$.
+Dividing is harder. Using when dividing by $n$, we multiply by the reciprocal $\frac{1}{n}=n^{-1}$. But since we are only working with natural numbers, the fraction $\frac{1}{n}$ doesn’t exist. So we need a new way to
+define a multiplicative inverse:
+$a^{-1}$ is the number less than $b$ that satisfies $(a^{-1}\cdot a) \mod b = 1$
+
+
+\begin{ex}
+What is the multiplicative inverse of $5\mod 7$ ?
+\end{ex}
+
+\begin{ex}
+What is the multiplicative inverse of $4\mod 9$ ?
+\end{ex}
+
+\begin{ex}
+Does $2$ have a multiplicative inverse $\mod 4$ ?
+\end{ex}
+
+\end{document}

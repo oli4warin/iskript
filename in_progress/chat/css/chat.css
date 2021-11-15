@@ -1,0 +1,8 @@
+.msg-body {
+    height: 200px;
+}
+
+#msg-list {
+    height: 500px;
+    overflow-y: scroll;
+}

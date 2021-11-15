@@ -4,10 +4,6 @@ var Chat = {
     'refresh': (callbacks, rate) => {
         Chat.intervalId = setInterval(callbacks, rate);
     },
-    'scrollToBottom': () => {
-        var elem = document.getElementById("msg-list");
-        elem.scrollTo(0, elem.scrollHeight);
-    },
     'getChat': (person) => {
         token = sessionStorage.getItem('token');
         Chat.queryServer("GET", "get_chat/" + person + '/' + token, (data) => {
@@ -17,8 +13,10 @@ var Chat = {
                 alert(data);
                 clearInterval(Chat.intervalId);
             }
-            document.getElementById("msg-list").replaceWith(htmlDoc.getElementById("msg-list"));
-            // Chat.scrollToBottom();
+            var elem = document.getElementById("msg-list");
+            scroll = elem.scrollTop;
+            elem.replaceWith(htmlDoc.getElementById("msg-list"));
+            document.getElementById("msg-list").scrollTo(0, scroll);
             var encryption = document.getElementById("encryption").value;
             Chat.decryptMsg(encryption);
         });

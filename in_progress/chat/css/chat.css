@@ -10,3 +10,13 @@
 #encryption-group {
     display: none;
 }
+
+h1 {
+    height: 200px;
+}
+
+h1:hover {
+    background: pink;
+    margin-left: 100px;
+    transition: margin-left 2s;
+}

@@ -206,4 +206,72 @@ What is the multiplicative inverse of $4\mod 9$ ?
 Does $2$ have a multiplicative inverse $\mod 4$ ?
 \end{ex}
 
+
+\newpage
+
+\subsection{Hashing}
+{\bf Reminder: }
+
+A hashing algorithm should have the following properties:
+\begin{enumerate}
+\item  quick to compute
+\item  all possible results should be equally likely
+\item  very hard to reverse
+\item  very hard to find two inputs with the same ouptut (these are called \emph{collisions})
+\item  small changes in the input should result in large changes in the output
+\end{enumerate}
+
+
+\begin{ex}
+Regard the following hashing algorithm: 
+\[
+\texttt{hash(input)} = \texttt{number-from-input} \mod 127
+\]
+\begin{enumerate}
+\item Is this a good hashing algorithm? Which conditions above are satisfied, which ones cannot be satisfied?
+\item Change the code in the jupyter notebook to calculate the hash described above. Find three different inputs that all have the hash value $42$.
+\end{enumerate}
+
+\end{ex}
+
+\begin{ex}
+We regard the following hashing algorithm: 
+\begin{itemize}
+\item Convert input to lowercase.
+\item Ignore special characters.
+\item Arrange all letters of the input in alphabetical order.
+\item Count how often each letter occurs.
+\item Write down  each letter together with its corresponding frequency.
+\end{itemize}
+Example: "Hello" becomes \texttt{e1 h1 l2 o1}
+\begin{enumerate}
+\item Find the hash for the input "The Answer to Life, the Universe and Everything is 42."
+\item Can you find {\bf any} input that has the following hash:
+\[
+\texttt{a1 e1 g1 i1 m3 n2 s1 t2 u2 y1 z1}
+\]
+\item Can you find a {\bf sensible} input that has the following hash:
+\[
+\texttt{a1 e1 g1 i1 m3 n2 s1 t2 u2 y1 z1}
+\]
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+We regard the hashing algorithm JHA ("Josh's Hash Algorithm" -- invented by Joshua Holden from the Rose-Hulman Institute of Technology in Indiana): 
+\[
+\texttt{hash(input)} = (7\ \cdot\ \texttt{\#-of-vowels}\  -\  3\ \cdot \ \texttt{\#-of-consonants}\  +\  \texttt{\#-of-spaces}^2) \mod 17
+\]
+Example: For the input "Hello my name is Alice" we get
+\[
+(7\cdot 8 - 3\cdot 10 + 4^2) \mod 17 = 8
+\] 
+\begin{enumerate}
+\item What is the hash to "A long time ago in a galaxy far far away"?
+\item Can you find a sensible input that has the hash value $0$?
+\end{enumerate}
+\end{ex}
+
+
+
 \end{document}

@@ -245,6 +245,7 @@ We regard the following hashing algorithm:
 \end{itemize}
 Example: "Hello" becomes \texttt{e1 h1 l2 o1}
 \begin{enumerate}
+\item Is this a good hashing algorithm? Which conditions above are satisfied, which ones cannot be satisfied?
 \item Find the hash for the input "The Answer to Life, the Universe and Everything is 42."
 \item Can you find {\bf any} input that has the following hash:
 \[
@@ -267,10 +268,34 @@ Example: For the input "Hello my name is Alice" we get
 (7\cdot 8 - 3\cdot 10 + 4^2) \mod 17 = 8
 \] 
 \begin{enumerate}
+\item Is this a good hashing algorithm? Which conditions above are satisfied, which ones cannot be satisfied?
 \item What is the hash to "A long time ago in a galaxy far far away"?
 \item Can you find a sensible input that has the hash value $0$?
 \end{enumerate}
 \end{ex}
+
+
+\begin{ex}
+Given the following excerpt from a rainbow table encoded with  SHA1:
+
+\begin{tabular}{rl}
+\texttt{input} & \texttt{SHA1 hash} \\
+abc000 & 4368A4330198860D6A8CF4C5E7619193594A52F4 \\
+abc001 & A3325CF1C081DB0CB9992F1716A66A7F44B4F522 \\
+abc002 & C12DD1CBBC17362579A617FDE0E287A1BEA09504 \\
+abc003 & 24C0219A84B5B8585256A7E9D66468C40FDC10FF \\ 
+abc004 & 9154095B37BA24E2B1F38BDFC815DA25C60F045C \\
+abc005 & 9EEEC88BFC50376C49DA4DC2165C84D228BD5BAD \\
+abc006 & 4EAE2D8134D7ECB0FACA5B0B95BA6F31FB87A215 
+\end{tabular}
+
+\begin{enumerate}
+\item Assume that each entry in the table consists of three letters and three numbers in lexicographical order. What are the next three inputs in the table? What are the three inputs that come before the excerpt?
+\item Can you say what the hash value for abc007 will be?
+\item Rudy Ridiculous has the password "abc" and the salt $003$. What is his hashed password in this database?
+\end{enumerate}
+\end{ex}
+
 
 
 

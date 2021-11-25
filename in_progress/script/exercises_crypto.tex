@@ -298,6 +298,28 @@ abc006 & 4EAE2D8134D7ECB0FACA5B0B95BA6F31FB87A215
 \end{enumerate}
 \end{ex}
 
+\begin{ex}
+Can you use the code for md5 on the juyter notebook and the concatenate function (place one string after the other)  '+' to hash a salted password? Does it make a difference if you add the salt to the beginning or the end of your string?
+
+The code block might look something like this:
+
+\begin{lstlisting}
+import hashlib
+
+string_to_hash = "Please enter your text to hash"
+salt = "Please select a salt: "
+
+def hash_md5(text):
+    return hashlib.md5(text.encode()).hexdigest()
+
+
+print("The md5 hashed output is: " + hash_md5(string_to_hash))
+
+\end{lstlisting}
+
+
+\end{ex}
+
 
 
 

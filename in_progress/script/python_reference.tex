@@ -1,0 +1,236 @@
+\documentclass[11pt,a4paper]{report}
+
+\usepackage{xcolor}
+\def\farbe{cyan}
+
+\usepackage{dclecture}
+
+\usepackage[a4paper,margin=2cm,landscape]{geometry}
+
+\usepackage{listings}
+\lstset{language=Python}
+
+\usepackage{longtable}
+
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.9,0.9,0.9}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+%	morekeywords={forward,turn},
+    backgroundcolor=\color{codegray},
+    commentstyle=\color{codegreen},
+%    keywordstyle=\color{codegreen},
+    numberstyle=\tiny\color{white},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    identifierstyle=\color{blue},
+    stringstyle=\color{orange},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+
+
+%%% Fancy Header and Footer
+\renewcommand{\headrule}{\vbox to 0pt{\hbox to\headwidth{\color{\farbe}\rule{\headwidth}{1pt}}\vss}}
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fusszeilenfelder bereinigen
+\fancyhead[C]{Computer Science} %Kopfzeile mitte
+%\fancyhead[R]{\includegraphics[width=0.2cm]{x.png}}
+\fancyfoot[C]{\thepage}
+
+
+
+
+
+
+\begin{document}
+\section{Python Reference Guide}
+Code references use some special notations that are useful to know:
+\begin{itemize}
+\item * zero or more of the same
+\item $[ \ldots ]$ optional arguments
+\end{itemize}
+
+\subsection{Python Basics}
+
+\begin{longtable}{|p{0.2\textwidth}|p{0.3\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|}
+\hline
+Python Command & Description & Example(s) & Output  \\
+\hline 
+\endhead
+
+\lstinline|print(*argument)| & Print the argument to the output line. Multiple arguments can be separated by a comma. Note that words (strings in computerspeak) must be enclosed in quotation marks. & \lstinline|print("Hello World!")| & \verb|Hello World!|\\
+&& \lstinline|print(2," and ", 3)| & \verb|2 and 3| \\
+\hline
+
+
+\lstinline|for i in range(n)| & Loop through the numbers from $0$ to $n-1$. The value $i$ can be used in the loop as a number. & \begin{lstlisting}
+for i in range(3):
+	print(i)
+\end{lstlisting} 
+& \begin{verbatim}
+0
+1
+2
+\end{verbatim}\\
+\hline
+\lstinline|for i in range(start,stop [,step])| & Loop through the numbers from \verb|start| to \verb|stop-1|. If no value for \verb|step| is given, then it defaults to $1$. If no value for \verb|start| is given iit defaults to $0$. & \begin{lstlisting}
+for i in range(1,5,2):
+	print(i)
+\end{lstlisting} 
+& \begin{verbatim}
+1
+3
+\end{verbatim}\\
+\hline
+
+\lstinline|def name([*argument]):| & Defines a function with \verb|name|. The function can have zero or more arguments. The arguments are values that can be passed to the function when it is called. & \begin{lstlisting}
+def my_print(n):
+	for i in  range (n):
+		print(i)
+my_print(2)
+\end{lstlisting} & \begin{verbatim}
+0
+1
+\end{verbatim} \\
+\hline
+\lstinline|random.randint(a,b)| & returns a random integer between $a$ and $b$ (Note: the \verb|random| module must be installed first). & \lstinline|random.randint(1,6)| & Simulates the throwing of a standard die:
+e.g. \verb|5| \\
+\hline
+\lstinline|name = [...]| & Python notation for a list with \verb|name|. A list is an ordered collection of objects. Elements in  the list can be accessed using the square brackets. {\bf Attention:} Lists start counting at zero.  Negative numbers are counted from the back of the list. & \begin{lstlisting}
+data = [2, 5, 7, 11]
+print(data[1])
+print(data[0])
+print(data[-1])
+\end{lstlisting} & \begin{verbatim}
+5
+2
+11
+\end{verbatim} \\
+\hline
+\lstinline|[...].append(value)| & Appends (= adds to the end) a \verb|value| to the end of an existing list. & \begin{lstlisting}
+data = [2, 5, 7, 11]
+data.append(4)
+print(data)
+\end{lstlisting} & \begin{verbatim}
+[2,5,7,11,4]
+\end{verbatim} \\
+\hline
+\lstinline|len(list)| & Returns the length of a list. & \begin{lstlisting}
+data = [2, 5, 7, 11]
+print(len(data)
+\end{lstlisting} & \verb|4| \\
+\hline
+\end{longtable}
+
+\subsection{Turtle Graphics}
+
+
+\begin{longtable}{|p{0.2\textwidth}|p{0.3\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|}
+\hline
+Python Command & Description & Example(s) & Output  \\
+\hline 
+\endhead
+
+\lstinline|make_turtle()| & Creates a new the turtle at position $(200,200)$ && \\
+\hline
+\lstinline|show()| & Shows the current position of the turtle and the path iit took to get there. &&\\
+\hline
+\lstinline|forward(x)| & Moves the turtle $x$ pixels forward. && \\
+\hline
+\lstinline|turn(a)| & Rotates the turtle by $a$ degrees in a counter clockwise direction. && \\
+\hline
+\lstinline|pen_up()| & Lifts up the "pen". Allows you to move the turtle without drawing a line && \\
+\hline
+\lstinline|pen_down()| & The turtle now draws a line when it moves. &&\\
+\hline
+\lstinline|color(your_color)| & Sets the color of the line to a selcted color. Colors can either be written as a rgb-hexcode (i.e. \verb|#FF7F50|) or as a name -- in this case "Coral". Lists of predefined color names can be found on the internet. &&\\
+\hline
+\lstinline|stroke_width(value)| & Sets the stroke width to a specified value. &&\\
+\hline
+\end{longtable}
+
+
+\subsection{Images}
+
+
+\begin{longtable}{|p{0.2\textwidth}|p{0.3\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|}
+\hline
+Python Command & Description & Example(s) & Output  \\
+\hline 
+\endhead
+\lstinline|write_image_from_data(data)| & Draws a grayscale image using the input \verb|data|. \verb|data| must be a list containing values between $0$ (black) and $1$ (white). \verb|data| must contain a square number of values (i.e. 4, 9, \ldots). Pixels are drawn by rows starting at the top left. & \begin{lstlisting}
+data = [0, 0.9, 1, 0.4]
+write_image_from_data(data)
+\end{lstlisting} & \centfig{0.1}{reference_2}\\
+\hline
+
+\lstinline|write_image_from_data_rgb(data)| & Draws a rgb-image using the input \verb|data|. \verb|data| must be a list containing values between $0$ and $255$. \verb|data| must contain three times a square number of values (i.e. 12, 18, \ldots). Each pixel is represented by three numbers: red value, green value and blue value. Pixels are drawn by rows starting at the top left. & \begin{lstlisting}
+data = [
+    255, 0, 0, 
+    0, 255, 0, 
+    0, 0, 255,
+    0, 0, 0,
+]
+write_image_from_data_rgb(data)
+\end{lstlisting} & \centfig{0.1}{reference_3}\\
+\hline
+\lstinline|load_image_data(url)| & Loads a real image from a given url. Returns two values: the data list and image width. && \\
+\hline
+\lstinline|write_image_rgb(data, width)| & Draws a picture from a given \verb|data| list with a selected \verb|width|. && \\
+\hline
+\end{longtable}
+
+\subsection{Cryptography and Hashing}
+
+\begin{longtable}{|p{0.2\textwidth}|p{0.3\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|}
+\hline
+Python Command & Description & Example(s) & Output  \\
+\hline 
+\endhead
+\lstinline|ord(character)| & Returns the ASCII value of the \verb|character| from the table. & \lstinline|ord("e")| & \verb|101| \\
+\hline
+\lstinline|chr(value)| & Returns the character that can be found at the position \verb|value| in the ASCII table. & \lstinline|chr(87)| & \verb|'W'| \\
+\hline
+
+
+\end{longtable}
+
+\subsection{Extra Bits -- for now}
+The commands in this section are for completeness. Do not worry if you do not understand them (yet).  As we progress, some of these commands may move up to other chapters\ldots
+
+\begin{longtable}{|p{0.2\textwidth}|p{0.3\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|}
+\hline
+Python Command & Description & Example(s) & Output  \\
+\hline 
+\endhead
+\lstinline|[from location] import module [as short_name]| & A \verb|module| is a collection of functions and other useful bits that are saved in a separate file. The \verb|location| tells the computer where to look for the module and the \verb|short_name| allows us to use a shorter name when using functions from the module. & \lstinline|from gymmu.turtle import *| & There is a folder called \verb|gymmu| that contains the module \verb|turtle|. The star (*) means we want to import all functions. \\
+\hline
+ && \begin{lstlisting}
+ import random as rd
+ rd.randint(1,6)
+ \end{lstlisting}
+ & returns a random number between $1$ and $6$: \newline
+ \verb|4| \\
+ \hline
+\end{longtable}
+
+
+
+\end{document}

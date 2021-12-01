@@ -1,0 +1,104 @@
+\documentclass[11pt,a4paper]{report}
+
+\usepackage{xcolor}
+\def\farbe{cyan}
+
+\usepackage{dclecture}
+
+\usepackage{listings}
+\lstset{language=html}
+
+
+%\definecolor{codegreen}{rgb}{0,0.6,0}
+%\definecolor{codegray}{rgb}{0.9,0.9,0.9}
+%\definecolor{codepurple}{rgb}{0.58,0,0.82}
+%\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+%
+%\lstdefinestyle{mystyle}{
+%%	morekeywords={forward,turn},
+%    backgroundcolor=\color{codegray},
+%    commentstyle=\color{codegreen},
+%%    keywordstyle=\color{codegreen},
+%    numberstyle=\tiny\color{gray},
+%    stringstyle=\color{codepurple},
+%    basicstyle=\footnotesize,
+%    identifierstyle=\color{blue},
+%    stringstyle=\color{orange},
+%    breakatwhitespace=false,
+%    breaklines=true,
+%    captionpos=b,
+%    keepspaces=true,
+%    numbers=left,
+%    numbersep=5pt,
+%    showspaces=false,
+%    showstringspaces=false,
+%    showtabs=false,
+%    tabsize=2
+%}
+%
+%\lstset{style=mystyle}
+
+
+
+
+%%% Fancy Header and Footer
+\renewcommand{\headrule}{\vbox to 0pt{\hbox to\headwidth{\color{\farbe}\rule{\headwidth}{1pt}}\vss}}
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fusszeilenfelder bereinigen
+\fancyhead[C]{Computer Science} %Kopfzeile mitte
+%\fancyhead[R]{\includegraphics[width=0.2cm]{x.png}}
+\fancyfoot[C]{\thepage}
+
+
+
+
+
+
+
+\begin{document}
+\section{HTML/CSS}
+
+\subsection{Homepage}
+
+\begin{ex}
+    Get your own homepage idea and make a sketch of it, to implement it later.
+    Possible types of homepages are
+
+    \begin{itemize}
+        \item a blog
+        \item a personal page
+        \item a band homepage
+        \item a gallery
+        \item a startpage
+    \end{itemize}
+\end{ex}
+
+\begin{ex}
+    Setup the basic structure of your website in plain HTML. Your website
+    should contain at least the following elements
+
+    \begin{itemize}
+        \item 3 links to a local or external page
+        \item 3 links to elements on the same page
+        \item 2 images
+        \item 2 paragraphs
+        \item 1 local webpage
+    \end{itemize}
+\end{ex}
+
+\begin{ex}
+    Create a new css-File and include it into your webpage. Use this css to
+    style your page.
+\end{ex}
+
+\begin{ex}
+    Publish your website. When you finished your website, pack all the files
+    needed in a zip, and upload it to in your OneNote. Create a new Section
+    called ``Website'' and put it there, with an comment that says if your
+    website should be published (uploaded to a server, for others to look at.
+    The server is publicly available but very hard to find, so no random people
+    will look at your homepage. The server will only be available for a short
+    time.)
+\end{ex}
+
+\end{document}

@@ -4,3 +4,4 @@ ipycanvas
 pillow
 requests
 hexdump
+beautifulsoup4

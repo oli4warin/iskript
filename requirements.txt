@@ -5,5 +5,5 @@ pillow
 requests
 hexdump
 beautifulsoup4
-jinja
+jinja2
 flask

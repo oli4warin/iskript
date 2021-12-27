@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Blog</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.entry h2 {
+    color: forestgreen;
+    text-align: center;
+}
+.entry h2:hover {
+    transition: margin 2s;
+    margin-left: -500px;
+}
+.entry {
+    width: 70%;
+    margin: 0px auto;
+}
+.entry > div {
+    padding: 50px;
+    border: 2px dotted mediumaquamarine;
+    border-radius: 20px;
+}
+.entry img {
+    width: 70%;
+    margin: 20px 15%;
+}
+.author {
+    float: right;
+    font-size: 0.8em;
+}
+.author::before {
+    content: "von ";
+}
+.highlight {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 30px 0px;
+}
+.highlight::before {
+    content: ">> ";
+}
+.highlight::after {
+    content: " <<";
+}
+.section {
+    border-bottom: 5px solid lightgray;
+    margin-bottom: 30px;
+}
+</style>
+    </head>
+    <body>
+        <div class="entry">
+            <h2> {{ title }} </h2>
+            <div>
+            {% for section in sections %}
+                <div class="section">
+                    {% if section.highlight %}
+                    <p class="highlight"> {{section.highlight}} </p>
+                    {% endif %}
+                    <p>
+                        {{ section.content }}
+                    </p>
+                    {% if section.img_url %}
+                    <img src=" {{section.img_url}} " alt=""/>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            <span class="author"> {{author}} </span>
+        </div>
+    </body>
+</html>

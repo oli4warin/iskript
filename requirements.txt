@@ -5,3 +5,5 @@ pillow
 requests
 hexdump
 beautifulsoup4
+jinja
+flask

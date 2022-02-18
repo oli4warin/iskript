@@ -223,8 +223,8 @@ Python Command & Description & Example(s) & Output  \\
 
 \end{longtable}
 
-\subsection{Extra Bits -- for now}
-The commands in this section are for completeness. Do not worry if you do not understand them (yet).  As we progress, some of these commands may move up to other chapters\ldots
+\subsection{Importing Modules}
+%The commands in this section are for completeness. Do not worry if you do not understand them (yet).  As we progress, some of these commands may move up to other chapters\ldots
 
 \begin{longtable}{|p{0.2\textwidth}|p{0.3\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|}
 \hline
@@ -241,6 +241,117 @@ Python Command & Description & Example(s) & Output  \\
  \verb|4| \\
  \hline
 \end{longtable}
+
+
+\subsection{JSON and Dictionaries}
+
+\begin{longtable}{|p{0.6\textwidth}|p{0.4\textwidth}|}
+\hline
+Python  Example(s) & Output  \\
+\hline 
+\endhead 
+ \begin{lstlisting}
+person = {
+    'name': 'Bob',
+    'age': 42,
+    'is_happy': True
+}
+\end{lstlisting}  &  A \emph{dictionary} with the \verb|keys| "name", "age" and "is\_happy" \\
+\hline
+\begin{lstlisting}
+import json
+
+person = {
+    'name': 'Bob',
+    'age': 42,
+    'is_happy': True
+}
+
+with open("test.json", 'w') as f:
+    json.dump(person, f)
+\end{lstlisting} & Writes the dictionary \verb|person| to an external file named \verb|test.json|. The json file can then be read by other applications. \\
+\hline
+
+\begin{lstlisting}
+with open("test.json", 'r') as f:
+    data = json.load(f)
+\end{lstlisting} & Reads the external file \verb|test.json| and saves its contents as \verb|data|. \\
+\hline
+
+
+\end{longtable}
+
+
+
+\subsection{Webscraping}
+
+\begin{longtable}{|p{0.6\textwidth}|p{0.4\textwidth}|}
+\hline
+Python  Example(s) & Output  \\
+\hline 
+\endhead
+ \begin{lstlisting}
+url = "https://www.theonion.com/"
+response = requests.get(url)
+soup = BeautifulSoup(response.content, "html.parser")
+headlines = [item.string for item in soup.select("h4")]
+\end{lstlisting}  & Retrieves all \verb|h4| tags from the website \url{https://www.theonion.com/}
+
+Standard webscraping code. \\
+\hline
+\begin{lstlisting}
+with open("headlines.json",'w') as f:
+    json.dump(headlines,f)
+\end{lstlisting} &
+Writes the data \verb|headlines| to an external json-file called \verb|headlines.json|. \\
+\hline
+\begin{lstlisting}
+def filter_function(item):
+    if len(item) > 8:
+        return True
+    return False
+
+new_cats = list(filter(filter_function, cats))
+\end{lstlisting} &
+Filters all entries from the list \verb|cats| that are longer than $8$ characters and writes  them to the list \verb|new_cats|.
+
+A filter function returns \verb|True| for the values you want to keep and \verb|False| for the values you want to discard. \\
+\hline
+
+\end{longtable}
+
+\subsection{Templating}
+
+\begin{longtable}{|p{0.6\textwidth}|p{0.4\textwidth}|}
+\hline
+Python  Example(s) & Output  \\
+\hline 
+\endhead
+ \begin{lstlisting}
+from jinja2 import Template
+
+template = Template(r"Hello {{ name }}!")
+res = template.render(name="Obi Wan")
+\end{lstlisting}  & Creates a template with the placeholder \verb|{{ name }}|. When the template is used (rendered), we pass the input that we want to the template. \\
+\hline
+\begin{lstlisting}
+template = Template(r"""
+<h2> {{ title}} </h2>
+<p> {{ content }} </p>
+""")
+
+res = template.render(
+    title="My First Blog",
+    content="This is the content of my first blog!"
+)
+\end{lstlisting} &
+Creates a \verb|html|-file with the selected title and content. \\
+\hline
+
+\end{longtable}
+
+\newpage
+
 
 
 

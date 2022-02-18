@@ -1,0 +1,122 @@
+\documentclass[11pt,a4paper]{report}
+
+\usepackage{xcolor}
+\def\farbe{blue}
+
+\usepackage{dclecture}
+
+\usepackage{listings}
+\lstset{language=Python}
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.9,0.9,0.9}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+%	morekeywords={forward,turn},
+    backgroundcolor=\color{codegray},
+    commentstyle=\color{codegreen},
+%    keywordstyle=\color{codegreen},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    identifierstyle=\color{blue},
+    stringstyle=\color{orange},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+
+
+%%% Fancy Header and Footer
+\renewcommand{\headrule}{\vbox to 0pt{\hbox to\headwidth{\color{\farbe}\rule{\headwidth}{1pt}}\vss}}
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fusszeilenfelder bereinigen
+\fancyhead[C]{Computer Science} %Kopfzeile mitte
+%\fancyhead[R]{\includegraphics[width=0.2cm]{x.png}}
+\fancyfoot[C]{\thepage}
+
+
+\title{Computer Science Group Project 2022 1E}
+\date{Spring 2022}
+
+
+
+\begin{document}
+\maketitle
+
+\newpage
+\section{First Steps}
+In the next few weeks you will be working in groups on programming an interactive game. The idea is to learn a new environment \verb|pygame| and apply your new and old knowledge to acheiving a creative and fun result.
+\subsection{Groups}
+Step one is to organize yourselves into groups of three to four people. 
+\subsection{Installing the Tools}
+In order to work on such a project you will need to install some software on your personal computers. Please make sure you have an administrator password at hand. 
+\begin{itemize}
+\item For version control and allowing us to see who contributed what you will need to install git on your personal computers. \\
+\url{https://git-scm.com/downloads}
+\item For programming in python you will need to install python (version 3.6 or higher). \\
+\url{https://www.python.org/}
+\item For working on the project we will use Visual Studio Code, which most of you have already installed.\\
+\url{https://code.visualstudio.com/}
+\item Within Visual Studio Code you will have to install some extension (via the \emph{Extensions} tab):
+\begin{itemize}
+\item Git Graph (make sure it's the one by \emph{mhutchie})
+\item Python
+\end{itemize}
+\item We will also need to download some python modules (mainly \verb|pygame|.
+
+\end{itemize}
+
+
+\section{Project Description}
+
+\subsection{Goals} 
+Your Goal is to write an interactive game using the game engine \verb|pygame|. It can be singleplayer or multiplayer; however, multiplayer should only be implemented on the same computer (either turn-based or using separate sets of keys).
+
+Some ideas for inspiration:
+\begin{itemize}
+\item Jump \& Run
+\item Top-Down RPG
+\item Turn-based card or board game
+\item Capture the Flag
+\item Worms
+\item Lemmings
+\item etc.
+\end{itemize}
+\subsection{Timeline}
+The project will last from week 11 to week 14. Final presentations of the projects will be on Monday 25.4.2022. The first week should be spent setting up a plan and learning about the \verb|pygame| module. Roughly around the middle of the project you should have a bare-bones version of the game that may only have a few basic features. The final version should be a playable game.
+
+For documentation (rules of the game, instructions on how to play etc), please write a small website (nothing fancy -- plain html is sufficient).
+
+\subsubsection{Milestones}
+\begin{enumerate}
+\item {\bf on 14.3.2022} A short presentation (<5 mins) where you present your project idea. The class will then have a chance to ask questions or make suggestions.
+\item {\bf around 30.3.2022} In a personal meeting with me you will show a bare-bones version of your game and I will give some feedback on how to progress.
+\item {\bf on 25.4.2022} Final version (including documentation) must be handed in (via github). In a short presentation (<15 mins) you will present your final version to the class and repsond to questions that may arise.
+\end{enumerate}
+\subsection{Grading}
+You will receive a group grade at the end of the project. Factors for grading include: Are you using your time wisely? Is everyone in the group contributing? Are you making progress? How did you implement my feedback from the second milestone? Does your game work? Are there any bugs or incomplete features? Is the documentation complete and understandable? \ldots
+
+In general the grade is the same for all members in a group. If we notice large discrepancies in the contributions (git commits) of certain members of a group we reserve the right to give individual grades.
+
+\subsection{Resources}
+The main resource you can use is the pygame website \url{https://www.pygame.org/news}. Here you can find examples and documentation for the pygame module. Additionally you can find many resources online that may help you to work on this project. 
+
+I will also always be around to assist as much as possible.
+
+
+\end{document}

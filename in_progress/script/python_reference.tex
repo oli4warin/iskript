@@ -303,7 +303,13 @@ Standard webscraping code. \\
 with open("headlines.json",'w') as f:
     json.dump(headlines,f)
 \end{lstlisting} &
-Writes the data \verb|headlines| to an external json-file called \verb|headlines.json|. \\
+Writes the data \verb|headlines| to an external json-file called \verb|headlines.json|. The \verb|'w'| indicates that any existing file called \verb|headlines.json| will be \emph{overwritten}.\\
+\hline
+\begin{lstlisting}
+with open("data.json", 'r') as f:
+    return json.load(f)
+\end{lstlisting} &
+Opens the file \verb|data.json| as something that python can work with. In the code it has the name \verb|f|. The \verb|'r'| indicates that we are only \emph{reading} the file and not writing anything to it. \\
 \hline
 \begin{lstlisting}
 def filter_function(item):
@@ -347,6 +353,23 @@ res = template.render(
 \end{lstlisting} &
 Creates a \verb|html|-file with the selected title and content. \\
 \hline
+
+\end{longtable}
+
+\subsection{Webservers}
+
+\begin{longtable}{|p{0.6\textwidth}|p{0.4\textwidth}|}
+\hline
+Python  Example(s) & Output  \\
+\hline 
+\endhead
+ \begin{lstlisting}
+@app.route("/")
+def home():
+    return render_template("index.html")
+\end{lstlisting}  & Adds the page \verb|index.html| to the webserver. This is the starting page when the site is first loaded. The function \verb|home()| is called a \emph{decorator function}; it can also execute code before rendering the template. \\
+\hline
+
 
 \end{longtable}
 

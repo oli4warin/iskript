@@ -1,0 +1,218 @@
+\documentclass[11pt,a4paper]{report}
+
+\usepackage{xcolor}
+\usepackage[ngerman]{babel}
+\def\farbe{blue}
+
+\usepackage{dclecture}
+
+\usepackage{listings}
+\lstset{language=Python}
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.9,0.9,0.9}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+%	morekeywords={forward,turn},
+    backgroundcolor=\color{codegray},
+    commentstyle=\color{codegreen},
+%    keywordstyle=\color{codegreen},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    identifierstyle=\color{blue},
+    stringstyle=\color{orange},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+
+
+%%% Fancy Header and Footer
+\renewcommand{\headrule}{\vbox to 0pt{\hbox to\headwidth{\color{\farbe}\rule{\headwidth}{1pt}}\vss}}
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fusszeilenfelder bereinigen
+\fancyhead[C]{Computer Science} %Kopfzeile mitte
+%\fancyhead[R]{\includegraphics[width=0.2cm]{x.png}}
+\fancyfoot[C]{\thepage}
+
+
+\title{Informatik Gruppenarbeit 1MZ}
+\date{Herbst 2022}
+
+
+
+\begin{document}
+\maketitle
+
+\newpage
+\section{Erste Schritte}
+
+In den nächsten Wochen werden Sie in Gruppen an einem Programmierprojekt
+arbeiten. Sie werden dabei ein interaktives Spiel entwickeln. Dabei werden Sie
+eine neue Umgebung (\verb|pygame|) kennenlernen, und Ihr bereits vorhandenes
+Wissen sowie neues anwenden, um ein tolles kreatives Spiel zu erstellen.
+
+\subsection{Gruppen}
+
+Im ersten Schritt werden Sie Gruppen bilden. Eine Gruppe besteht aus 3 bis 4
+Personen. Es kann hilfreich sein die Gruppen so einzuteilen das M und Z
+gemischt sind, damit arbeiten Sie im Praktikum in kleineren Gruppen, jedoch
+haben Sie öfters die Gelegenheit direkt Fragen zu stellen.
+
+\subsection{Installieren der Werkzeuge}
+
+Um an dem Projekt zu arbeiten müssen Sie einige Werkzeuge bei Ihnen lokal auf
+dem Computer installieren. Einige Werkzeuge haben Sie vermutlich bereits
+installiert. Ein Teil von Ihnen hat bereits alle Tools installiert und kann dem
+Rest der Gruppe bei der Installation helfen.
+
+\begin{itemize}
+\item Damit Sie Versionskontrolle für die Zusammenarbeit nutzen können, und
+    damit wir überprüfen können wer wieviel beigetragen hat, müssen Sie
+    \verb|Git| lokal auf Ihrem Computer installieren.
+
+    \begin{center}
+        \url{https://git-scm.com/downloads}
+    \end{center}
+
+\item Damit Sie auf Ihrem Rechner mit \verb|Python| und \verb|Pygame| arbeiten können, müssen
+    Sie \verb|Python 3.6| oder neuer installieren.
+
+        \begin{center}
+            \url{https://www.python.org/}
+        \end{center}
+
+\item Als Programmierumgebung verwenden wir \verb|Visual Studio Code|. Das
+    haben Sie bereits installiert.
+
+        \begin{center}
+            \url{https://code.visualstudio.com/}
+        \end{center}
+
+\item Damit Sie in \verb|Visual Studio Code| so arbeiten können wie Sie sich
+    das gewohnt sind, müssen Sie noch 2 Extensions installieren:
+\begin{itemize}
+\item Git Graph (das von \emph{mhutchie})
+\item Python
+\end{itemize}
+\item Sie werden auch noch Python-Module installieren müssen.
+
+\end{itemize}
+
+\subsection{Installieren von Modulen in Python}
+
+Um ein Modul in Python zu installieren, müssen Sie in VSCode eine Kommandozeile
+(Terminal) öffnen. Das können Sie ganz einfach machen indem Sie das \verb|Terminal|
+Menu anwählen, und dann den Punkt \verb|New Terminal| auswählen.
+Im Terminal müssen Sie dann einen der folgenden Befehle eingeben. Der Befehl
+den Sie brauchen hängt von Ihrem Betriebssystem ab und welche Version von
+Python Sie installiert haben. Für Windows funktioniert meist der erste Befehl,
+und bei Mac ist es der zweite. Sollten diese Befehle nicht gehen, verwenden Sie
+die anderen und Fragen Sie nach bei Problemen.
+
+\begin{itemize}
+    \item \verb|py -m pip install pygame|
+    \item \verb|python3 -m pip install pygame|
+    \item \verb|pip install pygame|
+    \item \verb|python -m pip install pygame|
+\end{itemize}
+
+\newpage
+
+\section{Projektbeschreibung}
+
+\subsection{Ziele} 
+
+Ziel des Projektes ist es ein interaktives Spiel mit der Spieleengine
+\verb|pygame| zu entwickeln. Der Fokus dabei liegt auf der Entwicklung eines
+Einzelspielerspiels. Mehrspielerspiele können auch entwickelt werden, diese
+sollten aber am gleichen Computer stattfinden.
+
+Einige Beispiele zur Inspiration:
+\begin{itemize}
+\item Jump \& Run
+\item Top-Down RPG
+\item Rundenbasiertes Karten oder Brettspiel
+\item Capture the Flag
+\item Worms
+\item Lemmings
+\item etc.
+\end{itemize}
+
+\subsection{Ablauf}
+Das Projekt dauert von der Woche 11 bis zur Woche 14. Die Abschlusspräsentation
+mit Demo des Spiels wird am 26.04. stattfinden. Die erste Woche sollte dafür
+verwendet werden einen Plan für das Spiel zu erstellen und sich mit
+\verb|Pygame| vertraut zu machen. Ungefähr in der Hälfte des Projektes sollten
+Sie eine minimale Version von Ihrem Spiel haben, die bereits einige
+Basisfeatures implementiert. Die finale Version des Spiel muss spielbar sein.
+
+Für die Dokumentation des Spiels (worum geht es, wie wird es gespielt, wer hat
+es entwickelt, wo ist es verfügbar) schreiben Sie eine eigene Webseite (dies
+muss kein Webserver sein HTML und CSS reichen aus).
+
+\subsubsection{Milensteine}
+\begin{description}
+    \item[am 15.03.2022] Eine kurze Präsentation (5 Minuten) über die Idee
+        Ihres Spiels. Die Klasse wird da die Gelegenheit haben Fragen zu
+        stellen und Anregungen zu geben.
+\item[um den 31.03.2022] In einem persönlichen Treffen stellen Sie mir Ihr
+    Projekt vor, was Sie bis jetzt gemacht haben und woran Sie noch arbeiten
+        werden.
+    \item[am 26.04.2022] Finale Version (inklusive Webseite) muss via Github
+        abgegeben werden. Es findet eine Präsentation mit Demo vor der Klasse
+        statt. Auftretende Fragen zum Projekt sollen beantwortet werden.
+\end{description}
+
+\subsection{Benotung}
+
+Sie werden eine Note als Gruppe für das Projekt erhalten. Faktoren die bei der
+Benotung berücksichtigt werden sind: Haben Sie die Zeit sinnvoll eingeteilt?
+Hat jeder in der Gruppe zum Projekt beigetragen? Machen Sie Fortschritt? Wie
+wurde das Feedback von Meilenstein 2 umgesetzt? Funktioniert Ihr Spiel? Gibt es
+Bugs oder nicht fertige Features? Ist die Dokumentation vollständig und
+verständlich? \dots
+
+Die Note ist für alle Gruppenmitglieder die gleiche. Treten jedoch starke
+Abweichungen in den Beiträgen auf (git commits) behalten wir uns das Recht vor
+für einzelne Gruppenmitglieder eine separate Note zu setzen.
+
+\newpage
+
+\subsection{Ressourcen}
+Sie Hauptressource die Sie verwenden werden ist die Webseite von \verb|Pygame|:
+\begin{center}
+    \url{https://www.pygame.org/news}
+\end{center}
+
+Hier finden Sie Beispiele und Dokumentation zu \verb|Pygame|.
+
+Zusätzlich können Sie im Internet viele Ressourcen finden wie man mit
+\verb|Pygame| arbeitet. Zum Beispiel diese Playliste:
+
+\begin{center}
+\url{https://www.youtube.com/playlist?list=PLkkm3wcQHjT7gn81Wn-e78cAyhwBW3FIc}
+\end{center}
+
+Die Playliste ist eine komplette Anleitung wie Sie ein Top-Down RPG entwickeln
+können. Es werden jedoch Konzepte verwendet die Sie noch nicht kennen. Dennoch
+sollte es möglich sein der Anleitung zu folgen.
+
+Bei Fragen und Problemen können Sie mich natürlich jederzeit kontaktieren.
+
+\end{document}

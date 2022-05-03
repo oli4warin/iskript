@@ -58,8 +58,9 @@
 \begin{document}
 
 \section*{From 1's and 0's to TikTok (or whichever App is trending today)}
-\setcounter{section}{1}
 A brief overview on how we can manipulate and work with very simple building blocks to create a vast global network. 
+\section{The Math}
+Iin this section we look at the mathematical basics of computing. 
 \subsection{The 1's and the 0's}
 Although some early computers were decimal machines, modern  computers are all binary. The reason for this is mainly engineering: It is relatively easy to make a switch with two positions \emph{on} and \emph{off}. Newer computers still apply this basic idea for their calculations -- just with electricity: low voltage is off (or zero) and high voltage is on (or one).
 
@@ -67,6 +68,7 @@ A basic storage unit of a computer is a \bfb{bit}, which is short for \bfb{binar
 
 Since one bit does not encode much information, modern computers use $64$ bits as a basic unit of storage. That means that each number, character and special symbol uses up $64$ bits of memory. This also means that a computer can not calculate with numbers that are too big -- this leads to \bfb{overflow}.
 
+\newpage
 \subsubsection{Exercises}
 
 \begin{ex}
@@ -182,11 +184,11 @@ For this to work each number has to have a fixed
 \subsubsection{Exercises}
 
 \begin{ex}
-Use 2's complement to calculate $7-5$ in binary.
+Use 2's complement to calculate $7-5$ in binary. Use a 4 bit notation.
 \end{ex}
 
 \begin{ex}
-Use 2's complement to calculate $5-5$ in binary.
+Use 2's complement to calculate $5-5$ in binary. Use a 4 bit notation.
 \end{ex}
 
 
@@ -222,8 +224,45 @@ Convert $0.2$ into binary.
 \end{ex}
 \sol{$0.\overline{0011}_2$}
 
+\newpage
 
 \subsubsection{Solutions}
 \printcursols
+
+\newpage
+\section{Data Representation}
+
+We saw in the previous section how numbers are represented and manipulated by computers. To have a fully functional modern computer we need many other types of data: text, images, sound etc. 
+
+In this section we will regard the basics of these data representations. We have seen many of these ideas before. 
+
+\subsection{Representing Text}
+
+ASCII stands for American Standard Code for Information Interchange. It is a character encoding standard used for representing text and certain special characters in computers. 
+
+Below is the complete 7 bit ASCII character table and decimal equivalent.
+
+\centfig{0.9}{ASCII.png}
+\hfill source: {\url{https://en.m.wikipedia.org/wiki/File:ASCII-Table.svg}}
+
+The 7 bit ASCII table is no longer really viable, since we need many more symbols in modern computers. For a while there was an extended ASCII table with 8 bits. However, modern encoding uses the Unicode format which is backwards compatible with ASCII but allows for many, many more different characters.
+
+For an explanation on how Unicode works, please watch the following video: \url{https://youtu.be/MijmeoH9LT4}
+
+\subsection{Representing Audio}
+
+Computer audio is encoded by taking the waveforms of an audio input and transcoding that into a digital representation. 
+
+A sound wave, in red, represented digitally, in blue (after sampling and 4-bit quantization):
+\centfig{0.8}{audio}
+\hfill \emph{source: \url{https://www.wikiwand.com/en/Digital_audio}}
+
+\subsection{Representing Images}
+
+Data in computers is stored and transmitted as a series of ones and zeros (also known as Binary). 
+
+To store an image on a computer, the image is broken down into tiny elements called pixels. A \bfb{pixel} (short for picture element) represents one colour. An image with a resolution of 1024 by 798 pixels has 1024 x 798 pixels (817,152 pixels). 
+
+For a monochrome image each pixel can be represented by one bit. For webpages and most standard applications we use a 16 bit colorspace. In  certain special situations, we may want more colors and perhaps an \bfb{alpha channel}. The alpha channel can encode transparency and other shading information.
 
 \end{document}

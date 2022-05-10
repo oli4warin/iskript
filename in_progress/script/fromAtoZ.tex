@@ -5,6 +5,17 @@
 
 \usepackage{dclecture}
 
+\usepackage{circuitikz}
+
+\ctikzset{
+    logic ports=ieee,
+    logic ports/scale=0.8,
+    logic ports/fill=lightgray
+}
+
+\usetikzlibrary{arrows,shapes.gates.logic.US,shapes.gates.logic.IEC,calc}
+
+
 \usepackage{listings}
 \lstset{language=Python}
 
@@ -261,8 +272,183 @@ A sound wave, in red, represented digitally, in blue (after sampling and 4-bit q
 
 Data in computers is stored and transmitted as a series of ones and zeros (also known as Binary). 
 
-To store an image on a computer, the image is broken down into tiny elements called pixels. A \bfb{pixel} (short for picture element) represents one colour. An image with a resolution of 1024 by 798 pixels has 1024 x 798 pixels (817,152 pixels). 
+To store an image on a computer, the image is broken down into tiny elements called pixels. A \bfb{pixel} (short for picture element) represents one colour. The number of pixels in an image is called its \bfb{resolution}. An image with a resolution of 1024 by 798 pixels has 1024 x 798 pixels (817,152 pixels). 
 
 For a monochrome image each pixel can be represented by one bit. For webpages and most standard applications we use a 16 bit colorspace. In  certain special situations, we may want more colors and perhaps an \bfb{alpha channel}. The alpha channel can encode transparency and other shading information.
+
+\subsection{Representing Video}
+
+Video information is one of the most complex types of information saved on a computer. It contains the equivalent of thousands of images and audio. 
+
+\newpage
+
+\section{Gates and Circuits}
+
+Computers are electronic devices - they take electrical power, translate it into ones and zeros and then manipulate those digits to give us any number of outputs: images, text files, videos, webpages etc. 
+
+They do this using \bfb{gates} and \bfb{circuits}. A gate is an electronic device that takes one or more input signals (current) and produces a single output. A circuit is a combination of gates that can fulfil a task (e.g. adding, storing data, retrieving data etc.).
+
+\subsection{Gates}
+
+Gates are also  sometimes called \bfb{logic gates} because they perform a single logic operation. We will look at the basic gates and some notation. There are three different ways in which these gates and their logic are represented; all have their advantages and disadvantages. 
+
+
+\bfb{Logic diagrams} are graphical representations of logic gates and their connections; these are used to show how complex circuits are created from simple pieces. The individual gates have standardized symbols.
+
+\bfb{Truth tables} write out all possiible inputs and outputs and are useful for determining the output of a circuit for a given input.
+
+\bfb{Boolean Algebra} is a purely algebraic notation for logic and is mainly used for theoretical proofs and calculations. 
+
+\newpage
+\subsubsection{The {\bf NOT} Gate}
+The not gate takes an input and reverses it. $1$ turns to $0$, TRUE to FALSE, Black to White etc. In technical terms it changes the current from a high voltage to a low voltage. The mathematical symbol for NOT is $\neg$.
+
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+\begin{tabular}{c|c|c}
+Logic diagram & Truth table & Algebra \\
+\hline
+\begin{tikzpicture}[baseline=1]
+\node[not port, draw] at ($(1,0)$) (Not) {};
+\draw ++(-0.5,0) node[left](A){$A$} -- (Not.in);
+\draw (Not.out) -- ++(0.5,0) node[right](){$Y$};
+\end{tikzpicture}
+& 
+\renewcommand{\arraystretch}{1}
+\begin{tabular}{c|c}
+$A$ & $Y$ \\
+\hline
+$0$ & $1$ \\
+$1$ & $0$
+\end{tabular}
+& $Y=\neg A$
+\end{tabular}
+\end{center}
+
+
+\subsubsection{The AND Gate}
+The AND gate returns a $1$ if and only if both inputs $A$ {\bf and} $B$ are $1$.
+\begin{center}
+\begin{tabular}{c|c|c}
+Logic diagram & Truth table & Algebra \\
+\hline
+\begin{tikzpicture}[baseline=1]
+\node[and port] at ($(1,0)$) (a) {};
+\draw ++(-0.5,0.25) node[left](A){$A$} -- (a.in 1);
+\draw ++(-0.5,-0.25) node[left](B){$B$} -- (a.in 2);
+\draw (Not.out) -- ++(0.5,0) node[right](){$Y$};
+\end{tikzpicture}
+& 
+\renewcommand{\arraystretch}{1}
+\begin{tabular}{c|c|c}
+$A$ & $B$ & $Y$ \\
+\hline
+$0$ & $0$ & $0$\\
+$1$ & $0$ & $0$\\
+$0$ & $1$ & $0$\\
+$1$ & $1$ & $1$
+\end{tabular}
+& $Y= A\wedge B$
+\end{tabular}
+\end{center}
+
+\subsubsection{The OR Gate}
+The OR gate returns a $1$ if one of inputs $A$ {\bf or} $B$ are $1$.
+\begin{center}
+\begin{tabular}{c|c|c}
+Logic diagram & Truth table & Algebra \\
+\hline
+\begin{tikzpicture}[baseline=1]
+\node[or port] at ($(1,0)$) (a) {};
+\draw ++(-0.5,0.25) node[left](A){$A$} -- (a.in 1);
+\draw ++(-0.5,-0.25) node[left](B){$B$} -- (a.in 2);
+\draw (Not.out) -- ++(0.5,0) node[right](){$Y$};
+\end{tikzpicture}
+& 
+\renewcommand{\arraystretch}{1}
+\begin{tabular}{c|c|c}
+$A$ & $B$ & $Y$ \\
+\hline
+$0$ & $0$ & $0$\\
+$1$ & $0$ & $1$\\
+$0$ & $1$ & $1$\\
+$1$ & $1$ & $1$
+\end{tabular}
+& $Y= A\lor B$
+\end{tabular}
+\end{center}
+
+\subsubsection{The XOR Gate}
+The XOR gate returns a $1$ if one of inputs $A$ {\bf or} $B$ are $1$ but not both.
+\begin{center}
+\begin{tabular}{c|c|c}
+Logic diagram & Truth table & Algebra \\
+\hline
+\begin{tikzpicture}[baseline=1]
+\node[xor port] at ($(1,0)$) (a) {};
+\draw ++(-0.5,0.25) node[left](A){$A$} -- (a.in 1);
+\draw ++(-0.5,-0.25) node[left](B){$B$} -- (a.in 2);
+\draw (Not.out) -- ++(0.5,0) node[right](){$Y$};
+\end{tikzpicture}
+& 
+\renewcommand{\arraystretch}{1}
+\begin{tabular}{c|c|c}
+$A$ & $B$ & $Y$ \\
+\hline
+$0$ & $0$ & $0$\\
+$1$ & $0$ & $1$\\
+$0$ & $1$ & $1$\\
+$1$ & $1$ & $0$
+\end{tabular}
+& $Y= A\oplus B$
+\end{tabular}
+\end{center}
+
+\subsubsection{NAND and NOR Gates}
+NAND and NOR gates are the inverses of AND and OR gates respectively. 
+
+\begin{center}
+\begin{tabular}{c|c|c}
+Logic diagram & Truth table & Algebra \\
+\hline
+\begin{tikzpicture}[baseline=1]
+\node[nand port] at ($(1,0)$) (a) {};
+\draw ++(-0.5,0.25) node[left](A){$A$} -- (a.in 1);
+\draw ++(-0.5,-0.25) node[left](B){$B$} -- (a.in 2);
+\draw (Not.out) -- ++(0.5,0) node[right](){$Y$};
+\end{tikzpicture}
+& 
+\renewcommand{\arraystretch}{1}
+\begin{tabular}{c|c|c}
+$A$ & $B$ & $Y$ \\
+\hline
+$0$ & $0$ & $1$\\
+$1$ & $0$ & $1$\\
+$0$ & $1$ & $1$\\
+$1$ & $1$ & $0$
+\end{tabular}
+& $Y= \neg(A\wedge B)$ \\
+\hline
+\begin{tikzpicture}[baseline=1]
+\node[nor port] at ($(1,0)$) (a) {};
+\draw ++(-0.5,0.25) node[left](A){$A$} -- (a.in 1);
+\draw ++(-0.5,-0.25) node[left](B){$B$} -- (a.in 2);
+\draw (Not.out) -- ++(0.5,0) node[right](){$Y$};
+\end{tikzpicture}
+& 
+\renewcommand{\arraystretch}{1}
+\begin{tabular}{c|c|c}
+$A$ & $B$ & $Y$ \\
+\hline
+$0$ & $0$ & $1$\\
+$1$ & $0$ & $0$\\
+$0$ & $1$ & $0$\\
+$1$ & $1$ & $0$
+\end{tabular}
+& $Y= \neg(A\lor B)$
+\end{tabular}
+\end{center}
+
+
 
 \end{document}

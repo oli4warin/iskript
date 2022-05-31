@@ -1,0 +1,182 @@
+\documentclass[12pt,a4paper]{report}
+
+\usepackage{xcolor}
+\def\farbe{blue}
+
+\usepackage{dclecture}
+
+\usepackage{circuitikz}
+
+\ctikzset{
+    logic ports=ieee,
+    logic ports/scale=0.8,
+    logic ports/fill=lightgray
+}
+
+\usetikzlibrary{arrows,shapes.gates.logic.US,shapes.gates.logic.IEC,calc}
+
+
+\usepackage{listings}
+\lstset{language=Python}
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.9,0.9,0.9}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+%	morekeywords={forward,turn},
+    backgroundcolor=\color{codegray},
+    commentstyle=\color{codegreen},
+%    keywordstyle=\color{codegreen},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    identifierstyle=\color{blue},
+    stringstyle=\color{orange},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+
+
+%%% Fancy Header and Footer
+\renewcommand{\headrule}{\vbox to 0pt{\hbox to\headwidth{\color{\farbe}\rule{\headwidth}{1pt}}\vss}}
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fusszeilenfelder bereinigen
+\fancyhead[C]{Computer Science} %Kopfzeile mitte
+%\fancyhead[R]{\includegraphics[width=0.2cm]{x.png}}
+\fancyfoot[C]{\thepage}
+
+
+\newcommand{\bfb}[1]{{\bf \color{blue} #1}}
+
+
+
+
+\begin{document}
+
+\section*{Computer Science and Ethics}
+
+\section*{Topics}
+\emph{Main source: \url{https://www.d.umn.edu/~tcolburn/cs3111/presentation/presentation.xhtml}}
+\subsection*{Networked Communications}
+\begin{itemize}
+\item Email (spam/phishing)
+\item Internet censorship and freedom of expression
+\item Identity theft
+\item Cyberbullying
+\item Internet addiction
+\item Social media immersion
+\item Ad Blocking on Websites
+\item Net neutrality
+\item Children, predators, and inappropriate content
+\item Human trafficking and the internet
+\item Misogyny and the gaming community
+\item Gaming and violence
+\item Massively multiplayer online role-playing games
+\item Internet of things
+\item Digital advertising
+\item Crowdfunding
+\item Filter/Content Bubbles in Networks
+\item Fake News
+\item Online Education
+\end{itemize}
+\subsection*{Intellectual Property} 
+\begin{itemize}
+\item Restrictions on fair use (DMCA, DRM)
+\item Digital media distribution
+\item Peer-to-peer networks
+\item Pirate Bay
+\item Piracy and video games
+\item Piracy and music
+\item Hardware modding and jailbreaking
+\item Software copyright and patents
+\item Software licensing
+\item Open-source software (OSS)
+\item The FSF and software freedom
+\item Creative Commons
+\item Intellectual Property on the Cloud
+\end{itemize}
+
+\subsection*{Information Privacy}
+\begin{itemize}
+\item "Big Data" and data mining
+\item Medical data and patient privacy
+\item Covert surveillance and wiretapping
+\item NSA
+\item Encryption
+\item Edward Snowden
+\item The Patriot Act
+\item Drones
+\item The Tor Browser
+\item Cyberstalking
+\item Nanny Surveillance
+\item Doxxing
+\end{itemize}
+
+\subsection*{Computer and Network Security}
+\begin{itemize}
+\item Massive data breaches
+\item Ethical hacking
+\item Social engineering
+\item Hacktivism
+\item DDoS Attacks
+\item Malware (spam, viruses, worms, rootkits)
+\item Online voting
+\item Cyber crime
+\item Cyber warfare
+\item OSS and security
+\item Wikileaks
+\item Medical Devices
+\end{itemize}
+
+\subsection*{Computer Reliability}
+\begin{itemize}
+\item Software issues (errors, failures, warranties)
+\item Software verification and validation
+\item Computer simulations
+\item Volkswagen software scandal
+\item Planned Obsolesence
+\end{itemize}
+
+\subsection*{Work, Wealth, and Society}
+\begin{itemize}
+\item Automation and unemployment
+\item Effects of globalization
+\item Digital divide
+\item Cryptocurrency
+\item Blockchain and its Impact
+\item Gender diversity in CS/STEM
+\item Virtual reality
+\item Whistleblowing
+\end{itemize}
+
+\subsection*{Artificial Intelligence and Artificial Life}
+\begin{itemize}
+\item "Racist" and "Sexist" AI
+\item Autonomous vehicles
+\item Turing test
+\item Electronic singularity
+\item Intelligence amplification and cyborgs
+\item Transhumanism
+\item Nanotechnology
+\item Creating moral robots
+\item Rights of robots
+\item Robotic surgery
+\item Automating Finance
+\end{itemize}
+
+\end{document}

@@ -59,7 +59,8 @@ def write_image_from_data(data):
 
     c = Canvas(width=150, height=150, sync_image_data=True)
     alpha = np.zeros((150, 150)) + 255
-    rgb_data = np.stack([newdata, newdata, newdata, alpha], axis=2)
+    rgb_data = np.stack([newdata, newdata, newdata], axis=2) #quickfix
+    # rgb_data = np.stack([newdata, newdata, newdata, alpha], axis=2)
     c.put_image_data(rgb_data, 0, 0)
     return c
 
@@ -81,7 +82,8 @@ def write_image_from_data_colored(data):
 
     c = Canvas(width=150, height=150, sync_image_data=True)
     alpha = np.zeros((150, 150)) + 255
-    rgb_data = np.stack([newdata[:,:,0], newdata[:,:,1], newdata[:,:,2], alpha], axis=2)
+    # rgb_data = np.stack([newdata[:,:,0], newdata[:,:,1], newdata[:,:,2], alpha], axis=2)
+    rgb_data = np.stack([newdata[:,:,0], newdata[:,:,1], newdata[:,:,2]], axis=2) #quickfix
     c.put_image_data(rgb_data, 0, 0)
     return c
 
@@ -103,7 +105,8 @@ def write_image_from_data_rgb(data):
 
     c = Canvas(width=150, height=150, sync_image_data=True)
     alpha = np.zeros((150, 150)) + 255
-    rgb_data = np.stack([newdata[:,:,0], newdata[:,:,1], newdata[:,:,2], alpha], axis=2)
+    # rgb_data = np.stack([newdata[:,:,0], newdata[:,:,1], newdata[:,:,2], alpha], axis=2)
+    rgb_data = np.stack([newdata[:,:,0], newdata[:,:,1], newdata[:,:,2]], axis=2) # quickfix
     c.put_image_data(rgb_data, 0, 0)
     return c
 

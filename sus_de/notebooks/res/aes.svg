@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 841.89 595.28" style="enable-background:new 0 0 841.89 595.28;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st1{font-family:'MyriadPro-Regular';}
+	.st2{font-size:72px;}
+	.st3{font-size:48px;}
+</style>
+<circle class="st0" cx="135.37" cy="210.11" r="68"/>
+<text transform="matrix(1 0 0 1 113.3429 231.2468)" class="st1 st2">A</text>
+<circle class="st0" cx="729.5" cy="210.5" r="68"/>
+<text transform="matrix(1 0 0 1 709.9885 231.6323)" class="st1 st2">B</text>
+<text transform="matrix(1 0 0 1 86.2842 364.1113)" class="st1 st3">Alice</text>
+<text transform="matrix(1 0 0 1 689.1885 364.1113)" class="st1 st3">Bob</text>
+</svg>

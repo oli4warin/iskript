@@ -168,32 +168,34 @@ ein Rechteck oder komplexere Formen, wie ein Dreieck, zu zeichnen.
 > Spielen Sie mit der Schildkröte. Können Sie diese dazu bringen das Bild zu
 > verlassen? Wie weit kann sie laufen, bis sie den Rand erreicht?
 
-## Fehler machen/deguggen
+## Fehler machen/debuggen
 
-Bei turle-Grafiken TODO
-The nice thing in Computer Science is that you can observe what you are doing.
-With the turtle is is very easy to give some new instructions and to verify
-that the instructions are correct, you can just execute the code. This is very
-important and should be done very often. Make it a habit to make small changes
-and execute them to see if they work as intended!
+Ein Vorteil beim Programmieren von Turtle-Grafiken, besteht darin, dass man
+genau sehen kann was man gerade tut. Es ist leicht ein paar neue Anweisungen
+anzugeben und zu kontrollieren, ob diese Anweisungen korrekt sind. Das ist sehr
+wichtig und sollte oft gemacht werden. Denn so kann man Fehler in frühzeitig
+erkennen. Probiert man ein Programm erst nach hunderten von Zeilen aus, kann es
+sehr schwierig werden, Fehler zu finden.
 
-It is also very common to make small errors in your code, and the code does not
-work as you intended. So it is also very important to understand what is
-happening here.
+<!-- It is also very common to make small errors in your code, and the code does not -->
+<!-- work as you intended. So it is also very important to understand what is -->
+<!-- happening here. -->
 
-The first thing you should know is that there is something called **syntax**. A
-**syntax** defines how a language can be read. Since a computer can only follow
-very strict rules, it is very important to get the **syntax** correct,
-otherwise the computer does not know what you want to tell it. On close
-observation you can see that numbers after `forward` and `turn` are in
-parentheses `()`. This is part of the **syntax** and very important for the
-computer. You can try what happens if you leave them away.
+Als Erstes sollten Sie wissen, dass es etwas gibt, dass **syntax** heisst. Eine
+**syntax** definiert wie eine Sprache gelesen werden kann. Da Computer nur sehr
+präzise und pedantisch formulierte Anweisungen befolgen kann, ist es sehr
+wichtig sie eine korrekte Syntax zu verwenden. Sobald ein Wort, eine Klammer
+oder sonst ein Zeichen falsch ist, kann der Computer das Programm nicht mehr
+ausführen. Wenn Sie obigen Code etwas genauer anschauen, können Sie erkennen,
+dass die Zahlen nach den Befehlen `forward` und `turn` in Klammern `()`
+geschrieben werden. Das ist Teil der **Syntax** und ist für den Computer
+wichtig. Sie können ausprobieren, was passiert, wenn man die Klammern weglässt.
 
-Another type of error is the **semantic** error. A **semantic** error does not
-lead to a crash of the program, but the program does not behave how you
-intended it. **Semantic** errors are quite common and sometimes very hard to
-spot. To spot a **semantic** error, you have to understand the program
-completely.
+Ein anderer Fehlertyp sind **semantische** Fehler. Ein **sematischer** Fehler
+führt nicht zu einem Absturz des Programms. Das Programm macht aber nicht das,
+was Sie eigentlich wollten. Fehler der **Semantik** sind sehr häufig und es
+kann manchmal sehr schwierig sein, diese zu korrigieren. Um einen solchen zu
+erkennen und zu korrigieren müssen Sie das Programm komplett verstanden haben.
 
 It is very easy to make **semantic** errors in the code above, since we have
 not discussed it in detail. I.e. maybe you added the new instructions at the

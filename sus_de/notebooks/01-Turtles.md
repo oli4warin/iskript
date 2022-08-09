@@ -231,12 +231,15 @@ Just below this, you can find another code cell, where you can play around with
 the new commands. This is a common scenario in Computer Science, where you have
 to build the intuition for the behavior of the code.
 
+Sie finden direkt unterhalb dieses Textes einen weiteren Codeblock, mit dem Sie
+mit diesen neuen Befehlen experimentieren können.
+
 ```python
 from gymmu.turtle import *
 
 make_turtle()
 
-# TODO: add your instructions here!
+# Fügen Sie ihre Anweisungen hier ein
 
 show()
 ```

@@ -197,28 +197,28 @@ was Sie eigentlich wollten. Fehler der **Semantik** sind sehr häufig und es
 kann manchmal sehr schwierig sein, diese zu korrigieren. Um einen solchen zu
 erkennen und zu korrigieren müssen Sie das Programm komplett verstanden haben.
 
-It is very easy to make **semantic** errors in the code above, since we have
-not discussed it in detail. I.e. maybe you added the new instructions at the
-end of the cell, after the line with `show()`. This would be perfectly fine,
-but it does not lead to the intended behavior. We want the turtle to execute
-all the code, and then show the image it drew. If we add the instructions after
-the line with `show()` you can see that these instructions are not drawn onto
-the image. You can check that for yourself, just add some instructions before
-and after the line with `show()` and execute the cell.
-
-You can make the same **semantic** error when you give the instructions to the
-turtle before the line with `make_turtle()`. You can also verify this behaviour
-for yourself.
-
-The process of going through the code and trying to find the errors is known as **debugging** and can be quit difficult if you have a lot of code. The trick is to try to isolate the code blocks that have errors in them from the ones that don’t work and then work your way towards the individual errors.
+Da wir den obigen Code noch nicht im Detail besprochen haben, ist passieren
+**semantische** Fehler sehr schnell. Zum Beispiel könnten wir eine Anweisung
+nach der Zeile `show()` hinzufügen. Dies würde keine Fehlermeldung erzeugen.
+Trozdem wüëde sich das Bild nicht ändern. Wir möchten, dass die Schildkröte
+alle Anweisungen ausführt und erst dann soll das Bild gezeigt werden. Wenn wir
+nach der Zeile `show()` hinzufügen, werden diese nicht mehr gezeichnet. Sie
+können dies selber ausprobieren.
 
 
-## More Instructions
+Sie können den analogen **semantischen** Fehler machen, wenn Sie Anweisungen
+vor der Zeile mit `make_turtle()` einfügen. Sie können das auch selber
+ausprobieren.
 
-To create some complex images we need more instructions that we can give to the
-turtle. As usually in Computer Science the names of these instructions should
-be pretty self explanatory. So we just provide a list with the rest of the
-instructions, without explaining what they do.
+Der Prozess, dass man den Code durchgeht und versucht die Fehler zu finden
+nennt man **debuggen** und kann schwierig sein, vor allem wenn Sie viele Zeilen
+Quellcode haben. Versuchen Sie in so einem Fall den Fehler einzugrenzen indem
+Sie schauen welche Teile funktionieren und welche nicht.
+
+## Mehr Anweisungen
+
+Um etwas komplexere Bilder zu generieren, benötigen wir mehr mögliche
+Anweisungen für die Schildkröte. Wie in der Informatik üblich, sollten die Bezeichnungen der folgenden Anweisungen ziemlich selbst erklärend sein. Daher sei hier nur eine Liste von Befehlen, ohne zu erklären was diese genau tun.
 
 - `pen_up()`
 - `pen_down()`
